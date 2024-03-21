@@ -1,0 +1,403 @@
+body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../images/backk.jpg) ; -webkit-font-smoothing:antialiased;}
+
+a{color:#00a9c6; text-decoration:none;}
+a:hover{color:#666;}
+.btn,a,.btn:hover,a:hover {
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+outline: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*contact*/
+.contactform textarea,.contactform input{width: 100%;padding:1em;border:1px solid #ccc;margin-bottom: 1em;border-radius: 0;outline: none;}
+/*contact*/
+
+#map{width: 100%; height: 500px;}
+#map p{margin: 0 !important;}
+
+.footer{background-color: #111; color: #fff; font-size: 1em;color: #aaa;}
+.footer a{color: #aaa;margin: 0 1em; }
+
+.gototop{position: fixed;bottom: 20px; right: 20px;background: rgba(0,0,0,0.5);padding: 10px;color: #fff;}
+.gototop i{line-height: 0.5em;}
+
+
+
+@media (max-width: 1200px) {
+	body{font:300 13px/13px Roboto,Arial,Helvetica;}
+	.navbar-brand{padding-top: 11px;}
+	.services ul li{margin:0 0.5em; }
+	
+	.grid figure h2{font: 700 1.5em Roboto,Arial,Helvetica;}
+	figure.effect-oscar figcaption{padding: 12%;}
+	figure.effect-oscar figcaption::before,figure.effect-chico figcaption::before{top: 20px;right: 20px;bottom: 20px;left: 20px;}
+
+	.partners img{margin: 0 25px 25px 0;}
+}
+
+@media (max-width: 900px) {
+	h1{font: 700 3.5em Roboto,Arial,Helvetica;}
+	h4 {font: 300 1.3em Roboto,Arial,Helvetica;}
+	.btn{padding: 1em 2em;}
+	.partners img{margin: 0 15px 25px 0;width: 157px;}
+	.services ul li{width: 9em;height: 9em;}
+	figure.effect-chico figcaption {padding: 2em;}	
+	figure.effect-oscar figcaption {padding: 20%;}
+	figure.effect-chico figcaption::before{top: 10px;right: 10px;bottom: 10px;left: 10px;}
+	.grid figure.effect-chico p{font-size: 0.6em;line-height: 1.5em;}	
+}
+
+
+@media (max-width: 767px) {
+	body{font:300 12px/12px Roboto,Arial,Helvetica;}
+	.navbar-nav > li > a {line-height: 1em;}	
+	.navbar-brand{padding: 7px;}
+	.navbar-brand img{height: 37px;}
+	.navbar-toggle{margin-top: 12px;}
+
+	.banner .caption,.carousel-caption,.carousel-control,.carousel-indicators{display: none;}
+
+	h2.text-center{text-align: left;font-size: 1.7em;}
+	h4 {font: 300 1.2em Roboto,Arial,Helvetica;}
+	#partners h2{padding: 0 1em;} 
+	#home {padding-top: 5em;}
+
+	.partners{display: block;float: left;}
+	.partners img{width: 120px;}
+
+
+
+	.about.spacer{padding-left: 2em;padding-right: 2em;}
+	.spacer{padding:2em 0 ;}
+	.services ul li{margin-bottom: 1em;}
+
+	.highlight-info .overlay{padding-bottom: 2em;}
+
+	.grid.team div{margin: 0;padding: 0;}
+	figure.effect-chico figcaption {padding: 1.5em;}
+	#map{height: 200px;}
+	.footer{padding-bottom: 2em;}
+}
+
+.comp1{
+	
+		color: #fff;
+		
+		animation: neonAnim 2s alternate-reverse infinite;
+	  }
+	  @keyframes neonAnim {
+		from {
+		  text-shadow:
+		  0 0 10px rgba(0, 255, 243, .7),
+		  0 0 40px rgba(0, 255, 243, .7),
+		  0 0 100px rgba(0, 255, 243, .7);
+		}
+		to {
+		  text-shadow:
+		  0 0 5px rgba(0, 255, 243, .7),
+		  0 0 20px rgba(0, 255, 243, .7),
+		  0 0 60px rgba(0, 255, 243, .7);
+		}
+		}
+/* timeline */
+/* barchart */
+/* Bar Graph Vertical */
+.bar-graph .year {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  color: black;
+}
+
+.bar-graph-vertical {
+  margin-top: 80px;
+  width: 680px;
+}
+
+.bar-graph-vertical .bar-containerb {
+  float: left;
+  height: 200px;
+  
+  margin-right: 8px;
+  position: relative;
+  text-align: center;
+  width: 40px;
+}
+
+.bar-graph-vertical .bar {
+  border-radius: 3px;
+  bottom: 40px;
+  position: absolute;
+  width: 40px;
+}
+
+.bar-graph-vertical .year {
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.bar-graph-two .bar::after {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  color: #fff;
+  content: attr(data-percentage);
+  font-weight: 700;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 24px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.bar-graph-two .bar-one .bar {
+  background-color: #64b2d1;
+  -webkit-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+  -moz-animation: show-bar-one-vertical 1.2s 0.1s forwards;
+  animation: show-bar-one-vertical 1.2s 0.1s forwards;
+}
+
+.bar-graph-two .bar-two .bar {
+  background-color: #5292ac;
+  -webkit-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+  -moz-animation: show-bar-two-vertical 1.2s 0.2s forwards;
+  animation: show-bar-two-vertical 1.2s 0.2s forwards;
+}
+
+.bar-graph-two .bar-three .bar {
+  background-color: #407286;
+  -webkit-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+  -moz-animation: show-bar-three-vertical 1.2s 0.3s forwards;
+  animation: show-bar-three-vertical 1.2s 0.3s forwards;
+}
+
+.bar-graph-two .bar-four .bar {
+  background-color: #2e515f;
+  -webkit-animation: show-bar-four-vertical 1.2s 0.4s forwards;
+  -moz-animation: show-bar-four-vertical 1.2s 0.4s forwards;
+  animation: show-bar-four-vertical 1.2s 0.4s forwards;
+}
+.bar-graph-two .bar-five .bar {
+  background-color: #15323d;
+  -webkit-animation: show-bar-five-vertical 1.2s 0.5s forwards;
+  -moz-animation: show-bar-five-vertical 1.2s 0.5s forwards;
+  animation: show-bar-five-vertical 1.2s 0.5s forwards;
+}
+
+@-webkit-keyframes show-bar-one-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 40%;
+  }
+}
+
+@-webkit-keyframes show-bar-two-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 55%;
+  }
+}
+
+@-webkit-keyframes show-bar-three-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 68%;
+  }
+}
+
+@-webkit-keyframes show-bar-four-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 82%;
+  }
+}
+@-webkit-keyframes show-bar-five-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 90%;
+  }
+}
+
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pos{
+  position:absolute;
+  margin-top: auto;
+  margin-left: 5cm;
+  margin-right: 1cm;
+  
+  
+}
+
+/* card */
+.backgroundc {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .containerc {
+   
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screenc {
+    position: relative;
+    background: #fdfcfcc3;
+    border-radius: 15px;
+    height: 10cm;
+    width: 20cm;
+  }
+  
+  .screenc:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(58, 58, 58, 0.951);
+    z-index: -1;
+  }
+  
+  
+  
+  .screenc-body {
+    display: flex;
+  }
+  
+  .screenc-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .screenc-body-item.left {
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  @media screen and (max-width: 600px) {
+    .screenc-body {
+      flex-direction: column;
+    }
+  
+    .screenc-body-item.left {
+      margin-bottom: 20px;
+    }
+    .backgroundc {
+      display: flex;
+      min-height: 90vh;
+    }
+    
+    .containerc {
+   
+      margin: center;
+      padding: 10px;
+    }
+    
+    .screenc {
+      position:relative;
+      background: #fdfcfc;
+      border-radius: 15px;
+      height: 10cm;
+      width: 10.5cm;
+    }
+    .pos{
+      position:relact;
+      margin-top: auto;
+      margin-left: 1cm;
+      margin-right: 1cm;
+    
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .screenc-body {
+      flex-direction: column;
+    }
+  
+    .screenc-body-item.left {
+      margin-bottom: 20px;
+    }
+    .backgroundc {
+      display: flex;
+      min-height: 90vh;
+    }
+    
+    .containerc {
+     
+      margin: center;
+      padding: 15px;
+    }
+    
+    .screenc {
+      position:relative;
+      background: #fdfcfc;
+      border-radius: 15px;
+      height: 9cm;
+      width: 9cm;
+      margin-left: 15px;
+    }
+    .pos{
+      position :relative;
+      margin-top: auto;
+      margin-left: 1cm;
+      margin-right: 1cm;
+      
+    }
+  }
+  /* barcards */
+
+
+  /* mani card */
+ 

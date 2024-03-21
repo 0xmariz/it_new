@@ -1,0 +1,2531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="placement/assets/timstyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Placement </title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:600' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="placement/assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="placement/assets/animate/animate.css" />
+<link rel="stylesheet" href="placement/assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="placement/assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="placement/placement/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="placement/placement/images/favicon.ico" type="image/x-icon">
+
+
+<!-- <link rel="stylesheet" href="placement/assets/style.css"> -->
+<link rel="stylesheet" href="placement/styled.css">
+
+
+<link href="placement/img/favicon.ico" rel="icon">
+
+
+
+<!-- extra header -->
+<link href="https://cdnjs.cloudflare.com/ajax/./libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- ./Libraries Stylesheet -->
+
+<link href="placement/./lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+<!-- Customized Bootstrap Stylesheet -->
+<link href="placement/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="placement/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+<!-- Template Stylesheet -->
+<link href="placement/assets/style.css" rel="stylesheet">
+<link href="assets/css/nav.css" rel="stylesheet">
+<link href="/hero.scss" rel="stylesheet">
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600&display=swap');
+  
+  
+  :root{
+  
+      --timelineme-width:450px;
+  
+      --timelineme-color:#575e74;
+      --icon-color:#ff000d;
+      --inline-color:#8a0203;
+      --second-color:#fff;
+      --circle-radius-1:14px;
+      --circle-radius-2:8px;
+  
+      --horizon-height:2px;
+  
+      --line-width:6px;
+  }
+  
+  
+  header img{
+      width:100%;
+      animation:splash 1s ease-in;
+  }
+  @keyframes splash{
+      to{opacity:1;}
+      from{opacity:0;}
+  }
+  @keyframes splash2{
+      to{opacity:1;transform:scale(1)}
+      from{opacity:0;transform:scale(0)}
+  }
+  
+  .conf{
+      color:var(--inline-color);
+  }
+  
+  .timelineme{
+      margin:2em 0;
+      margin-top:0;
+      padding:5em 0;
+      display:flex;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      animation:splash  1s 1s ease-in;
+      animation-fill-mode: forwards;
+      opacity: 0;
+  }
+  
+  .timelineme::before{
+      top:0;
+      content:'';
+      background-color:var(--timelineme-color);
+      min-height: 100%;
+      width:var(--line-width);
+      border-radius: 3px;
+      position: absolute;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:-1;
+  }
+  
+  .timelineme .line{
+      margin-bottom:25px;
+      position:relative;
+      max-width:var(--timelineme-width);
+      word-spacing: 1px;
+      margin-left:calc(50% - var(--line-width));
+      transform:all 1s;
+  }
+  .timelineme .line.anim{
+      animation:splash2 1s ease-in-out;
+      animation-fill-mode: forwards;
+      display:block!important;
+  }
+  .timelineme .line:nth-child(even){
+      margin-left:calc(50% - var(--timelineme-width));
+  }
+  .timelineme .line:nth-child(even) .date{
+      text-align: right;
+      padding-right:16px;
+  }
+  
+  .timelineme .line:nth-child(even) .horizon{
+      left:33px;
+      transform:rotate(180deg);
+      position: relative;
+  }
+  .timelineme .line:nth-child(even) .txt{
+      padding-left: 50px;
+  }
+  
+  .timelineme .line::before{
+     
+  }
+  .timelineme .line::after{
+      content:'';
+      position: absolute;
+  
+  }
+  
+  .timelineme .line .date{
+      color:var(--icon-color);
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 800;
+      word-spacing: 1px;
+      padding-left:30px;
+      margin-bottom:6px;
+      word-wrap:break-word;
+  }
+  
+  .timelineme .line .horizon{
+    height:var(--horizon-height);
+    width:100%;
+    left:-25px;
+    position: relative;
+    background-color:var(--inline-color);
+    margin-bottom:4px;
+  }
+  .timelineme .line .horizon::before{
+      content:'';
+      border-radius:50%;
+      background-color:var(--icon-color);
+      height:var(--circle-radius-1);
+      width:var(--circle-radius-1);
+      left:25px;
+      top: -6px;  /*calc((var(--circle-radius-1) + var(--horizon-height) ) / 2 * -1);*/
+      position: absolute;
+  }
+  .timelineme .line .horizon::after{
+      content:'';
+      border-radius:50%;
+      background-color:var(--icon-color);
+      height:var(--circle-radius-2);
+      width:var(--circle-radius-2);
+      top:-2px;
+      right:0;
+      position: absolute;
+  }
+  .timelineme .line .horizon .icon{
+      position:absolute;
+      border-radius:50%;
+      height: calc(var(--circle-radius-1) * 2.8);
+      width: calc(var(--circle-radius-1) * 2.8);
+      background-color:var(--icon-color);
+      top:-50%;
+      transform:translateY(-50%);
+      left:-30px;
+  }
+  .timelineme .line .horizon .icon i,
+  .timelineme .line .horizon .icon svg{
+      position:relative;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      font-size:1.4em;
+  
+  }
+  .timelineme .line .horizon .icon svg{
+      height:25px;
+      width:25px;
+      
+  }
+  .timelineme .line .txt{
+      font-size:16px;
+      padding-left:20px;
+      color:var(--second-color);
+      width:calc(100% - 25px);
+  }
+  
+  @media only screen and (max-width: 450px) {
+      :root{
+          --timelineme-width:200px;
+      }
+      .timelineme .line .txt{
+          font-size:12px;
+      }
+  }
+  
+    </style>
+
+<style>
+
+
+  .ji{
+    font-size: 2.5rem;
+    font-family: 'Montserrat';
+    font-weight: normal;
+    color: #444;
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .wrapperhigher{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+  
+  .cols{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .col{
+    width: calc(25% - 2rem);
+    margin: 1rem;
+    cursor: pointer;
+  }
+  
+  .containerhigher{
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+  
+  .front,
+  .back{
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+    border-radius: 10px;
+    background-position: center;
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    text-align: center;
+    min-height: 280px;
+    height: auto;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .back{
+    background: #cedce7;
+    background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+    background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  }
+  
+  .front:after{
+    position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      content: '';
+      display: block;
+      opacity: .6;
+      background-color: #000;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      border-radius: 10px;
+  }
+  .containerhigher:hover .front,
+  .containerhigher:hover .back{
+      -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+  
+  .back{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+  
+  .inner{
+      -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+              transform: translateY(-50%) translateZ(60px) scale(0.94);
+      top: 50%;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 2rem;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      outline: 1px solid transparent;
+      -webkit-perspective: inherit;
+              perspective: inherit;
+      z-index: 2;
+  }
+  
+  .containerhigher .back{
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg);
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  }
+  
+  .containerhigher .front{
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+  }
+  
+  .containerhigher:hover .back{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  .containerhigher:hover .front{
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+  
+  .front .inner p{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .front .inner p:after{
+    content: '';
+    width: 4rem;
+    height: 2px;
+    position: absolute;
+    background: #C6D4DF;
+    display: block;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -.75rem;
+  }
+  
+  .front .inner span{
+    color: rgba(255,255,255,0.7);
+    font-family: 'Montserrat';
+    font-weight: 300;
+  }
+  
+  @media screen and (max-width: 64rem){
+    .col{
+      width: calc(33.333333% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 48rem){
+    .col{
+      width: calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (max-width: 32rem){
+    .col{
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+  
+      </style>
+      <style>
+      
+        html *, body * {
+          box-sizing: border-box;
+       }
+        html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+          margin: 0;
+          padding: 0;
+       }
+        html h2, body h2 {
+          font-size: 2.5em;
+          font-weight: 700;
+          color: #353436;
+          margin-bottom: 0.8em;
+       }
+        html p, body p {
+          font-size: 14px;
+          letter-spacing: 0.8px;
+          line-height: 1.5;
+          color: #353436;
+       }
+        html a, body a {
+          text-decoration: none;
+          color: inherit;
+          letter-spacing: 0.8px;
+          line-height: 1.5;
+       }
+        html .contai, body .contai {
+          background-color: #fff;
+          height: 30em;
+          width: 65%;
+          margin: auto;
+          display: block;
+          position: absolute;
+         margin-top: 25%;
+         padding-bottom: 20px;
+          transform: translateY(-50%);
+          left: 0;
+          right: 0;
+          -moz-box-shadow: 5px 5px 35px 0px #cbcbcb;
+          -webkit-box-shadow: 5px 5px 35px 0px #cbcbcb;
+          -o-box-shadow: 5px 5px 35px 0px #cbcbcb;
+          box-shadow: 5px 5px 35px 0px #cbcbcb;
+          overflow: hidden;
+       }
+        html .contai .wrapper, body .contai .wrapper {
+          height: 100%;
+          width: 100%;
+          position: relative;
+       }
+        html .contai .wrapper .slide, body .contai .wrapper .slide {
+          height: 100%;
+          width: 100%;
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+       }
+        html .contai .wrapper .slide .slide-img, body .contai .wrapper .slide .slide-img {
+          width: 40%;
+          float: left;
+          position: relative;
+          height: 100%;
+       }
+        html .contai .wrapper .slide .slide-img:before, body .contai .wrapper .slide .slide-img:before {
+          content: "";
+          height: 0%;
+          background-color: #fff;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 5;
+          transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -webkit-transition: all 0.5s ease-in-out;
+       }
+        html .contai .wrapper .slide .slide-img.active:before, body .contai .wrapper .slide .slide-img.active:before {
+          content: "";
+          height: 100%;
+          background-color: #fff;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          z-index: 5;
+       }
+        html .contai .wrapper .slide .slide-img img, body .contai .wrapper .slide .slide-img img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          position: absolute;
+          right: 0;
+          left: 0;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+       }
+        html .contai.wrapper .slide .slide-content, body .contai .wrapper .slide .slide-content {
+          width: 60%;
+          float: left;
+          padding: 10% 8% 0em 8%;
+          position: relative;
+       }
+        html .contai .wrapper .slide .slide-content h2, body .contai .wrapper .slide .slide-content h2 {
+          position: relative;
+       }
+        html .contai .wrapper .slide .slide-content h2:before, body .contai .wrapper .slide .slide-content h2:before {
+          content: "";
+          height: 0%;
+          background-color: #fff;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 5;
+          transition: all 0.3s linear;
+          -ms-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          -webkit-transition: all 0.3s linear;
+       }
+        html .contai .wrapper .slide .slide-content h2.active:before, body .contai .wrapper .slide .slide-content h2.active:before {
+          content: "";
+          height: 100%;
+       }
+        html .contai .wrapper .slide .slide-content p, body .contai .wrapper .slide .slide-content p {
+          position: relative;
+       }
+        html .contai .wrapper .slide .slide-content p:before, body .contai .wrapper .slide .slide-content p:before {
+          content: "";
+          height: 0%;
+          background-color: #fff;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 5;
+          transition: all 0.3s linear;
+          -ms-transition: all 0.3s linear;
+          -moz-transition: all 0.3s linear;
+          -webkit-transition: all 0.3s linear;
+          transition-delay: 0.3s;
+       }
+        html .contai .wrapper .slide .slide-content p.active:before, body .contai .wrapper .slide .slide-content p.active:before {
+          content: "";
+          height: 100%;
+       }
+        html .contai .wrapper .slide .slide-content a, body .contai .wrapper .slide .slide-content a {
+          color: #da566f;
+          font-size: 13px;
+          text-decoration: underline;
+          font-weight: 600;
+          display: inline-block;
+          margin-top: 1em;
+          position: relative;
+       }
+        html .contai .wrapper .slide .slide-content a:before, body .contai .wrapper .slide .slide-content a:before {
+          content: "";
+          height: 0%;
+          background-color: #fff;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 5;
+          transition: all 0.2s ease-in-out;
+          -ms-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -webkit-transition: all 0.2s ease-in-out;
+          transition-delay: 0.5s;
+       }
+        html .contai .wrapper .slide .slide-content a.active:before, body .contai .wrapper .slide .slide-content a.active:before {
+          content: "";
+          height: 100%;
+       }
+        html .contai .wrapper .slide .slide-content .button, body .contai .wrapper .slide .slide-content .button {
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          margin-top: 4em;
+          transition: all 0.4s;
+          -ms-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          -webkit-transition: all 0.4s;
+       }
+        html .contai .wrapper .slide .slide-content .button .inactive i, body .contai .wrapper .slide .slide-content .button .inactive i {
+          color: #ccc;
+       }
+        html .contai .wrapper .slide .slide-content .button .inactive i:hover, body .contai .wrapper .slide .slide-content .button .inactive i:hover {
+          color: #ccc;
+       }
+        html .contai .wrapper .slide .slide-content .button .button-left, body .contai .wrapper .slide .slide-content .button .button-left {
+          float: left;
+          width: 50%;
+       }
+        html .contai .wrapper .slide .slide-content .button .button-right, body .contai .wrapper .slide .slide-content .button .button-right {
+          float: right;
+          width: 50%;
+          text-align: right;
+       }
+        html .contai .wrapper .slide .slide-content .button i, body .contai .wrapper .slide .slide-content .button i {
+          font-size: 1.3em;
+          cursor: pointer;
+          color: #555;
+          transition: all 0.3s;
+          -ms-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+       }
+        html .contai .wrapper .slide .slide-content .button i:hover, body .contai .wrapper .slide .slide-content .button i:hover {
+          color: #000;
+       }
+        @media only screen and (max-width: 1024px) {
+          html .contai, body .contai {
+            width: 90%;
+         }
+       }
+        @media only screen and (max-width: 767px) {
+          html h2, body h2 {
+            font-size: 1.5em;
+         }
+          html .contai, body .contai {
+            width: 93%;
+            margin: 3% auto;
+            overflow: inherit;
+            height: 100%;
+            position: relative;
+            top: 0;
+            transform: inherit;
+         }
+          html .contai .wrapper .slide .slide-img, body .contai .wrapper .slide .slide-img {
+            width: 100%;
+            height: 45%;
+         }
+          html .contai .wrapper .slide .slide-content, body .contai .wrapper .slide .slide-content {
+            width: 100%;
+            padding: 2em 2em;
+            background-color: #fff;
+         }
+          html .contai .wrapper .slide .slide-content .button, body .contai .wrapper .slide .slide-content .button {
+            margin-top: 2em;
+         }
+         html .contai .wrapper .slide .slide-img, body .contai .wrapper .slide .slide-img {
+          width: 40%;
+          float: left;
+          position: absolute;
+          height: 100%;
+       }
+        html .contai .wrapper .slide .slide-img:before, body .contai .wrapper .slide .slide-img:before {
+          content: "";
+          height: 0%;
+          background-color: #fff;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 10%;
+          z-index: 5;
+          transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -webkit-transition: all 0.5s ease-in-out;
+       }
+        html .contai .wrapper .slide .slide-img.active:before, body .contai .wrapper .slide .slide-img.active:before {
+          content: "";
+          height: 100%;
+          background-color: #fff;
+          width: 100%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          z-index: 5;
+       }
+      
+       }
+       @media only screen and (max-width: 400px) {
+          html h2, body h2 {
+            font-size: 1.5em;
+         }
+          html .contai, body .contai {
+            width: 93%;
+            margin: 3% auto;
+            overflow: inherit;
+            height: 100%;
+            position: relative;
+            top: 0;
+            transform: inherit;
+         }
+          html .contai .wrapper .slide .slide-img, body .contai .wrapper .slide .slide-img {
+            width: 50%;
+            height: 45%;
+         }
+          html .contai .wrapper .slide .slide-content, body .contai .wrapper .slide .slide-content {
+            width: 100%;
+            padding: 2em 2em;
+            background-color: #fff;
+         }
+          html .contai .wrapper .slide .slide-content .button, body .contai .wrapper .slide .slide-content .button {
+            margin-top: 2em;
+         }
+       }
+       .graph span{
+        color: #ccc;
+       }
+
+
+
+
+
+
+      </style>       
+
+
+</head>
+
+<body >
+  <header class="bgcolor">
+    <header class="main-header clearfix" role="header">
+      <div class="logo"> 
+       <a href="https://stjosephs.ac.in/index.html" class="sjce"><em>S</em><em style="text-transform: lowercase;">t.</em>  JOSEPH'S</a>
+     </div>
+      <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a> 
+      <nav id="menu" class="main-nav resp" role="navigation">
+       <ul class="main-menu">
+         <li><a href="index.html">Home</a></li>
+         <li class="has-submenu"><a href="aboutus.html">About Us</a></li> 
+          <li><a href="facaulty.html">FACULTY</a></li>
+          <li><a href="lab.html">LAB</a></li>
+         <li><a href="placements.html" class="external">PLACEMENTS</a></li>
+         <li><a href="randd.html">R&D</a></li>
+         <li><a href="academics.html">ACADEMICS</a></li>
+         <li><a href="activities.html">ACTIVITIES</a></li>
+       </ul>
+     </nav> 
+    </header>
+    </header>  
+  
+    
+
+    <div class="demo-cont">
+      <!-- slider start -->
+      <div class="fnc-slider example-slider">
+        <div class="fnc-slider__slides">
+          <!-- slide start -->
+          <div class="fnc-slide m--blend-green m--active-slide">
+            <div class="fnc-slide__inner">
+              <!-- <div class="fnc-slide__mask">
+                <div class="fnc-slide__mask-inner"></div>
+              </div> -->
+              <div class="fnc-slide__content">
+                <h2 class="fnc-slide__heading">
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                </h2>
+                <a href="#placement">
+                <button type="button" class="fnc-slide__action-btn">
+                  Placement
+                  <span data-text="Placement">Placement</span>
+                </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- slide end -->
+          <!-- slide start -->
+          <div class="fnc-slide m--blend-dark">
+            <div class="fnc-slide__inner">
+              <!-- <div class="fnc-slide__mask">
+                <div class="fnc-slide__mask-inner"></div>
+              </div> -->
+              <div class="fnc-slide__content">
+                <h2 class="fnc-slide__heading">
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                </h2>
+                <a href="#entrep"><button type="button" class="fnc-slide__action-btn">
+                  Entreprenerur
+                  <span data-text="Entreprenerur">Entreprenerur</span>
+                </button></a>
+              </div>
+            </div>
+          </div>
+          <!-- slide end -->
+          <!-- slide start -->
+          <div class="fnc-slide m--blend-red">
+            <div class="fnc-slide__inner">
+              <!-- <div class="fnc-slide__mask">
+                <div class="fnc-slide__mask-inner"></div>
+              </div> -->
+              <div class="fnc-slide__content">
+                <h2 class="fnc-slide__heading">
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                </h2>
+                <a href="#education"><button type="button" class="fnc-slide__action-btn">
+                  Higher Study's
+                  <span data-text="Higher Study's">Higher Study's</span>
+                </button></a>
+              </div>
+            </div>
+          </div>
+          <!-- slide end -->
+          <!-- slide start -->
+          <div class="fnc-slide m--blend-blue">
+            <div class="fnc-slide__inner">
+              <!-- <div class="fnc-slide__mask">
+                <div class="fnc-slide__mask-inner"></div>
+              </div> -->
+              <!-- <div class="fnc-slide__content">
+                <h2 class="fnc-slide__heading">
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                  <div class="fnc-slide__heading-line">
+                    <span></span>
+                  </div>
+                </h2>
+                 <button type="button" class="fnc-slide__action-btn">
+                  Credits
+                  <span data-text="Credits">Credits</span>
+                </button>
+              </div> -->
+            </div>
+          </div>
+          <!-- slide end -->
+        </div>
+        <nav class="fnc-nav">
+          <div class="fnc-nav__bgs">
+            <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+            <div class="fnc-nav__bg m--navbg-dark"></div>
+            <div class="fnc-nav__bg m--navbg-red"></div>
+            <div class="fnc-nav__bg m--navbg-blue"></div>
+          </div>
+          <div class="fnc-nav__controls">
+            <button class="fnc-nav__control">
+              Placement
+              <span class="fnc-nav__control-progress"></span>
+            </button>
+            <button class="fnc-nav__control">
+              enterperner
+              <span class="fnc-nav__control-progress"></span>
+            </button>
+            <button class="fnc-nav__control">
+              higher studies
+              <span class="fnc-nav__control-progress"></span>
+            </button>
+            <!-- <button class="fnc-nav__control">
+              Thor
+              <span class="fnc-nav__control-progress"></span>
+            </button> -->
+          </div>
+        </nav>
+      </div>
+      <!-- slider end -->
+      
+    </div>
+    <script>(function() {
+
+      var $$ = function(selector, context) {
+        var context = context || document;
+        var elements = context.querySelectorAll(selector);
+        return [].slice.call(elements);
+      };
+    
+      function _fncSliderInit($slider, options) {
+        var prefix = ".fnc-";
+    
+        var $slider = $slider;
+        var $slidesCont = $slider.querySelector(prefix + "slider__slides");
+        var $slides = $$(prefix + "slide", $slider);
+        var $controls = $$(prefix + "nav__control", $slider);
+        var $controlsBgs = $$(prefix + "nav__bg", $slider);
+        var $progressAS = $$(prefix + "nav__control-progress", $slider);
+    
+        var numOfSlides = $slides.length;
+        var curSlide = 1;
+        var sliding = false;
+        var slidingAT = +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
+        var slidingDelay = +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
+    
+        var autoSlidingActive = false;
+        var autoSlidingTO;
+        var autoSlidingDelay = 5000; // default autosliding delay value
+        var autoSlidingBlocked = false;
+    
+        var $activeSlide;
+        var $activeControlsBg;
+        var $prevControl;
+    
+        function setIDs() {
+          $slides.forEach(function($slide, index) {
+            $slide.classList.add("fnc-slide-" + (index + 1));
+          });
+    
+          $controls.forEach(function($control, index) {
+            $control.setAttribute("data-slide", index + 1);
+            $control.classList.add("fnc-nav__control-" + (index + 1));
+          });
+    
+          $controlsBgs.forEach(function($bg, index) {
+            $bg.classList.add("fnc-nav__bg-" + (index + 1));
+          });
+        };
+    
+        setIDs();
+    
+        function afterSlidingHandler() {
+          $slider.querySelector(".m--previous-slide").classList.remove("m--active-slide", "m--previous-slide");
+          $slider.querySelector(".m--previous-nav-bg").classList.remove("m--active-nav-bg", "m--previous-nav-bg");
+    
+          $activeSlide.classList.remove("m--before-sliding");
+          $activeControlsBg.classList.remove("m--nav-bg-before");
+          $prevControl.classList.remove("m--prev-control");
+          $prevControl.classList.add("m--reset-progress");
+          var triggerLayout = $prevControl.offsetTop;
+          $prevControl.classList.remove("m--reset-progress");
+    
+          sliding = false;
+          var layoutTrigger = $slider.offsetTop;
+    
+          if (autoSlidingActive && !autoSlidingBlocked) {
+            setAutoslidingTO();
+          }
+        };
+    
+        function performSliding(slideID) {
+          if (sliding) return;
+          sliding = true;
+          window.clearTimeout(autoSlidingTO);
+          curSlide = slideID;
+    
+          $prevControl = $slider.querySelector(".m--active-control");
+          $prevControl.classList.remove("m--active-control");
+          $prevControl.classList.add("m--prev-control");
+          $slider.querySelector(prefix + "nav__control-" + slideID).classList.add("m--active-control");
+    
+          $activeSlide = $slider.querySelector(prefix + "slide-" + slideID);
+          $activeControlsBg = $slider.querySelector(prefix + "nav__bg-" + slideID);
+    
+          $slider.querySelector(".m--active-slide").classList.add("m--previous-slide");
+          $slider.querySelector(".m--active-nav-bg").classList.add("m--previous-nav-bg");
+    
+          $activeSlide.classList.add("m--before-sliding");
+          $activeControlsBg.classList.add("m--nav-bg-before");
+    
+          var layoutTrigger = $activeSlide.offsetTop;
+    
+          $activeSlide.classList.add("m--active-slide");
+          $activeControlsBg.classList.add("m--active-nav-bg");
+    
+          setTimeout(afterSlidingHandler, slidingAT + slidingDelay);
+        };
+    
+    
+    
+        function controlClickHandler() {
+          if (sliding) return;
+         
+          if (options.blockASafterClick) {
+            autoSlidingBlocked = true;
+            $slider.classList.add("m--autosliding-blocked");
+          }
+    
+          var slideID = +this.getAttribute("data-slide");
+    
+          performSliding(slideID);
+        };
+    
+        $controls.forEach(function($control) {
+          $control.addEventListener("click", controlClickHandler);
+        });
+    
+        function setAutoslidingTO() {
+          window.clearTimeout(autoSlidingTO);
+          var delay = +options.autoSlidingDelay || autoSlidingDelay;
+          curSlide++;
+          if (curSlide > numOfSlides) curSlide = 1;
+    
+          autoSlidingTO = setTimeout(function() {
+            performSliding(curSlide);
+          }, delay);
+        };
+    
+        if (options.autoSliding || +options.autoSlidingDelay > 0) {
+          if (options.autoSliding === false) return;
+          
+          autoSlidingActive = true;
+          setAutoslidingTO();
+          
+          $slider.classList.add("m--with-autosliding");
+          var triggerLayout = $slider.offsetTop;
+          
+          var delay = +options.autoSlidingDelay || autoSlidingDelay;
+          delay += slidingDelay + slidingAT;
+          
+          $progressAS.forEach(function($progress) {
+            $progress.style.transition = "transform " + (delay / 1000) + "s";
+          });
+        }
+        
+        $slider.querySelector(".fnc-nav__control:first-child").classList.add("m--active-control");
+    
+      };
+    
+      var fncSlider = function(sliderSelector, options) {
+        var $sliders = $$(sliderSelector);
+    
+        $sliders.forEach(function($slider) {
+          _fncSliderInit($slider, options);
+        });
+      };
+    
+      window.fncSlider = fncSlider;
+    }());
+    
+    /* not part of the slider scripts */
+    
+    /* Slider initialization
+    options:
+    autoSliding - boolean
+    autoSlidingDelay - delay in ms. If audoSliding is on and no value provided, default value is 5000
+    blockASafterClick - boolean. If user clicked any sliding control, autosliding won't start again
+    */
+    fncSlider(".example-slider", {autoSlidingDelay: 4000});
+    
+    var $demoCont = document.querySelector(".demo-cont");
+    
+    [].slice.call(document.querySelectorAll(".fnc-slide__action-btn")).forEach(function($btn) {
+      $btn.addEventListener("click", function() {
+        // $demoCont.classList.toggle("credits-active");
+      });
+    });
+    
+    document.querySelector(".demo-cont__credits-close").addEventListener("click", function() {
+      // $demoCont.classList.remove("credits-active");
+    });
+    
+    document.querySelector(".js-activate-global-blending").addEventListener("click", function() {
+      document.querySelector(".example-slider").classList.toggle("m--global-blending-active");
+    });</script>
+
+
+<h1 class="text24" id="placement" >Placement Achieved</h1>
+
+
+<!-- graph -->
+
+<div id="bar-chart">
+  <div class="graph">
+    <ul class="x-axis">
+      <li><span style="color: #ccc;">2019</span></li>
+      <li><span>2020</span></li>
+      <li><span>2021</span></li>
+      <li><span>2022</span></li>
+      <li><span>2023</span></li>
+    </ul>
+    <ul class="y-axis">
+      <li><span>280</span></li>
+      <li><span>210</span></li>
+      <li><span>140</span></li>
+      <li><span>70</span></li>
+      <li><span>0</span></li>
+     
+      
+    </ul>
+    <div class="bars">
+      <div class="bar-group">
+        <div class="bar bar-1 stat-1" style="height: 65%;">      
+          <span>181</span>
+        </div>
+        <div class="bar bar-2 stat-2" style="height: 91%;">
+          <span>256</span>
+        </div>
+        <div class="bar bar-3 stat-3" style="height: 56%;">
+          <span>155</span>
+        </div>
+      </div>
+      <div class="bar-group">
+        <div class="bar bar-4 stat-1" style="height: 68%;">
+          <span>184</span>
+        </div>
+        <div class="bar bar-5 stat-2" style="height: 95%;">
+          <span>265</span>
+        </div>
+        <div class="bar bar-6 stat-3" style="height: 52%;">
+          <span>145</span>
+        </div>
+      </div>
+      <div class="bar-group">
+        <div class="bar bar-7 stat-1" style="height: 58%;">
+          <span>161</span>
+        </div>
+        <div class="bar bar-8 stat-2" style="height: 76%;">
+          <span>212</span>
+        </div>
+        <div class="bar bar-9 stat-3" style="height: 49%;">
+          <span>137</span>
+        </div></div>
+      <div class="bar-group">
+        <div class="bar bar-10 stat-1" style="height: 68%;">
+          <span>189</span>
+        </div>
+        <div class="bar bar-11 stat-2" style="height: 99%;">
+          <span>273</span>
+        </div>
+        <div class="bar bar-12 stat-3" style="height: 59%">
+          <span>165</span>
+        </div>
+      </div>
+      <div class="bar-group">
+        <div class="bar bar-13 stat-1" style="height: 67%;">
+          <span>185</span>
+        </div>
+        <div class="bar bar-14 stat-2" style="height: 65%;">
+          <span>183</span>
+        </div>
+        <div class="bar bar-15 stat-3" style="height: 47%;">
+          <span>129</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+<div style="margin-left: 10%; display: flex;gap: 20px;">
+  <div style="background-color: red; height: 20px;width: 20px;"> </div>
+  <p style="color: white; font-size: 20px;">Total Strength</p>
+  <div style="background-color:greenyellow; height: 20px; width: 20px;"></div>
+  <p style="color: white; font-size: 20px;">Total Offers</p>
+  <div style="background-color:lightskyblue; height: 20px; width: 20px;"></div>
+  <p style="color: white; font-size: 20px;">Individual Placed</p>
+</div>
+
+
+
+
+</section>
+</main>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/./libs/Chart.js/2.5.0/Chart.bundle.js'></script><script  src="./script.js"></script>
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1 class="text24">Companies offering Us</h1>
+<br>
+<br> <br> <br>
+
+<!-- <button class="toggle" id="direction-toggle"> -->
+  <span>Toggle scroll axis</span>
+  <svg aria-hidden="true" viewBox="0 0 512 512" width="100" title4="arrows-alt-h">
+    <path d="M377.941 169.941V216H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.568 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296h243.882v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.568 0-33.941l-86.059-86.059c-15.119-15.12-40.971-4.412-40.971 16.97z" />
+  </svg>
+</button>
+
+<article class="wrapper">
+  <div class="marquee">
+    
+
+    <div aria-hidden="true" class="marquee__group">
+      <div>
+        <img src="placement/images/Group 51.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 52.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 53.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 54.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 55.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 56.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 57.png">
+      </div> 
+      <div >
+        <img src="placement/images/Group 62 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 63 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/zoho.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 58.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 59 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 60 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 61 (1).png">
+      </div>
+      <div>
+        <img src="placement/images/Group 51.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 52.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 53.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 54.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 55.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 56.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 57.png">
+      </div> 
+      <div >
+        <img src="placement/images/Group 62 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 63 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/zoho.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 58.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 59 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 60 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 61 (1).png">
+      </div>
+      <div>
+        <img src="placement/images/Group 51.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 52.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 53.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 54.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 55.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 56.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 57.png">
+      </div> 
+      <div >
+        <img src="placement/images/Group 62 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 63 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/zoho.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 58.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 59 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 60 (1).png">
+      </div>
+      <div >
+        <img src="placement/images/Group 61 (1).png">
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee marquee--reverse">
+    <div class="marquee__group">
+      <div >
+        <img src="placement/images/Group 64 (1).png">
+      </div>
+      <div  >
+        <img src="placement/images/amazon.png">
+      </div>
+      <div >
+        <img src="placement/images/bosch.png">
+      </div>
+      <div >
+        <img src="placement/images/cognizant.png">
+      </div>
+      <div >
+        <img src="placement/images/hcl.png">
+      </div>
+      <div >
+        <img src="placement/images/infosys.png">
+      </div>
+      
+      <div >
+        <img src="placement/images/ninjacart.png">
+      </div>
+      <div >
+        <img src="placement/images/nokianetworks.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/soprasteria.png">
+      </div>
+      <div >
+        <img src="placement/images/spiglobal.png">
+      </div>
+      <div >
+        <img src="placement/images/syntel.png">
+      </div>
+      <div >
+        <img src="placement/images/tcs.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/this.png">
+      </div>
+      <div >
+        <img src="placement/images/wipro.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 64 (1).png">
+      </div>
+      <div  >
+        <img src="placement/images/amazon.png">
+      </div>
+      <div >
+        <img src="placement/images/bosch.png">
+      </div>
+      <div >
+        <img src="placement/images/cognizant.png">
+      </div>
+      <div >
+        <img src="placement/images/hcl.png">
+      </div>
+      <div >
+        <img src="placement/images/infosys.png">
+      </div>
+      
+      <div >
+        <img src="placement/images/ninjacart.png">
+      </div>
+      <div >
+        <img src="placement/images/nokianetworks.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/soprasteria.png">
+      </div>
+      <div >
+        <img src="placement/images/spiglobal.png">
+      </div>
+      <div >
+        <img src="placement/images/syntel.png">
+      </div>
+      <div >
+        <img src="placement/images/tcs.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/this.png">
+      </div>
+      <div >
+        <img src="placement/images/wipro.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 64 (1).png">
+      </div>
+      <div  >
+        <img src="placement/images/amazon.png">
+      </div>
+      <div >
+        <img src="placement/images/bosch.png">
+      </div>
+      <div >
+        <img src="placement/images/cognizant.png">
+      </div>
+      <div >
+        <img src="placement/images/hcl.png">
+      </div>
+      <div >
+        <img src="placement/images/infosys.png">
+      </div>
+      
+      <div >
+        <img src="placement/images/ninjacart.png">
+      </div>
+      <div >
+        <img src="placement/images/nokianetworks.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/soprasteria.png">
+      </div>
+      <div >
+        <img src="placement/images/spiglobal.png">
+      </div>
+      <div >
+        <img src="placement/images/syntel.png">
+      </div>
+      <div >
+        <img src="placement/images/tcs.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/this.png">
+      </div>
+      <div >
+        <img src="placement/images/wipro.png">
+      </div>
+      <div >
+        <img src="placement/images/Group 64 (1).png">
+      </div>
+      <div  >
+        <img src="placement/images/amazon.png">
+      </div>
+      <div >
+        <img src="placement/images/bosch.png">
+      </div>
+      <div >
+        <img src="placement/images/cognizant.png">
+      </div>
+      <div >
+        <img src="placement/images/hcl.png">
+      </div>
+      <div >
+        <img src="placement/images/infosys.png">
+      </div>
+      
+      <div >
+        <img src="placement/images/ninjacart.png">
+      </div>
+      <div >
+        <img src="placement/images/nokianetworks.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/soprasteria.png">
+      </div>
+      <div >
+        <img src="placement/images/spiglobal.png">
+      </div>
+      <div >
+        <img src="placement/images/syntel.png">
+      </div>
+      <div >
+        <img src="placement/images/tcs.png">
+      </div>
+    
+      <div >
+        <img src="placement/images/this.png">
+      </div>
+      <div >
+        <img src="placement/images/wipro.png">
+      </div>
+      
+    </div>
+  </div>
+ 
+
+ 
+</article>
+
+
+<script>
+  /*
+ JS to toggle scroll axis styles
+*/
+const control = document.getElementById("direction-toggle");
+const marquees = document.querySelectorAll(".marquee");
+const wrapper = document.querySelector(".wrapper");
+
+control.addEventListener("click", () => {
+  control.classList.toggle("toggle--vertical");
+  wrapper.classList.toggle("wrapper--vertical");
+  [...marquees].forEach((marquee) =>
+    marquee.classList.toggle("marquee--vertical")
+  );
+});
+
+</script>
+
+
+<!-- 
+<div class="slider">
+	<div class="slide-track">
+		<div class="slide">
+			<img src="placement/images/Group 10.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 11.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 12.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 13.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 14.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 15.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 16.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 17.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 18.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 19.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 2.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 20.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 21.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="placement/images/Group 22.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 23.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 24.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 25.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 26.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 27.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 28.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 29.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 3.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 7.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="placement/images/Group 8.png" height="200" width="250" alt="" />
+		</div>
+	</div>
+</div>
+
+<div class="slider1">
+	<div class="slide-track1">
+		<div class="slide1">
+			<img src="placement/images/Group 10.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 11.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 12.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 13.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 14.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 15.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 16.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 17.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 18.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 19.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 2.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 20.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 21.png" height="200" width="250" alt="" />
+		</div>
+		<div class="slide1">
+			<img src="placement/images/Group 22.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 23.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 24.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 25.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 26.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 27.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 28.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 29.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 3.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 7.png" height="200" width="250" alt="" />
+		</div>
+    <div class="slide1">
+			<img src="placement/images/Group 8.png" height="200" width="250" alt="" />
+		</div>
+	</div>
+</div> -->
+
+
+<!-- <div id="contact" class="spacer">
+
+
+
+
+
+
+<ul class="dcards">
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;" style="margin-bottom: 1rem;"><img class="arrdcard img" src="./placement/images/group1.png"  />
+        
+        </div>
+        
+     
+  </li>
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 2.png"/>
+        
+        </div>
+  </li>
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img"src="placement/images/Group 3.png"/>
+        
+        </div>
+  </li>
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 7.png"/>
+         
+        </div>
+  </li>  
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 8.png"/>
+          
+        </div>
+  </li>
+  <li>
+    <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 10.png"/>
+        
+      </div>
+</li>
+
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 11.png"/>
+      
+    </div>
+</li>
+
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 12.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 13.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 14.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 15.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 16.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 17.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 18.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 19.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 20.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 21.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 22.png"/>
+      
+    </div>
+</li>
+<li>
+  <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 23.png"/>
+      
+    </div>
+</li>
+
+ </ul>
+</div> -->
+ <br>
+ <h1 class="text24">Training Partners</h1>
+ <ul class="dcards">
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 24.png"  />
+        
+        </div>
+        
+     
+  </li>
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 25.png"/>
+        
+       </div>
+  </li>
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img"src="placement/images/Group 26.png"/></div>
+  </li>
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 27.png"/></div>
+  </li>  
+  <li>
+      <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 28.png"/>
+          
+        </div>
+  </li>
+  <li>
+    <div class="arrcard" style="margin-bottom: 1rem;"><img class="arrdcard img" src="placement/images/Group 29.png"/>
+        
+      </div>
+</li>
+</ul>
+
+
+<!-- <h2 class="text24" style="padding-right: 5px;">Training Programs<a href="hi.html">hi</a></h2> -->
+
+ <br>
+
+
+ <!-- <div class="timelineme">
+
+  <div class="line">
+      <div class="date">1 AĞUSTOS 2016</div>
+      <div class="horizon">
+          <div class="icon"><svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="tv-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-tv-alt fa-w-20 fa-5x"><path fill="currentColor" d="M528 464H112a16 16 0 0 0-16 16v16a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-16a16 16 0 0 0-16-16zM592 0H48A48 48 0 0 0 0 48v320a48 48 0 0 0 48 48h544a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zm0 368H48V48h544z" class=""></path></svg></div>
+      </div>
+      <p class="txt">Kemal Baratav bilgisayar ekranında beliren gizemli yazılar aracılığıyla <b class="conf">Kızıl Elçi</b> olarak adlandırdığı bir kaynaktan mesajlar almaya başlar.İkazların açılış cümlesi hep aynıdır; <b class="conf">sakin ol;plana güven</b>.Bu kahin ona karanlık ve kaçınılmaz bir geleceğe hazırlanması için talimatlar vermeye başlar.</p>
+  </div>
+
+  <div class="line">
+      <div class="date">9 OCAK 2020</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="virus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-virus fa-w-16 fa-5x"><path fill="currentColor" d="M483.55,227.55H462c-50.68,0-76.07-61.27-40.23-97.11L437,115.19A28.44,28.44,0,0,0,396.8,75L381.56,90.22A55.74,55.74,0,0,1,341.74,107c-29.24,0-57.29-22.7-57.29-57V28.44a28.45,28.45,0,0,0-56.9,0V50c0,34.29-28.05,57-57.29,57a55.7,55.7,0,0,1-39.82-16.77L115.2,75A28.44,28.44,0,0,0,75,115.19l15.25,15.25c35.84,35.84,10.45,97.11-40.23,97.11H28.45a28.45,28.45,0,1,0,0,56.89H50c50.68,0,76.07,61.28,40.23,97.12L75,396.8A28.45,28.45,0,0,0,115.2,437l15.24-15.25A55.7,55.7,0,0,1,170.25,405c29.25,0,57.3,22.7,57.3,57v21.54a28.45,28.45,0,0,0,56.9,0V462c0-34.29,28.05-57,57.3-57a55.7,55.7,0,0,1,39.81,16.77L396.8,437A28.45,28.45,0,0,0,437,396.8l-15.25-15.24c-35.84-35.84-10.45-97.12,40.23-97.12h21.54a28.45,28.45,0,1,0,0-56.89ZM379.88,307.32c-10.64,25.71-8.94,53.3,3.84,76.44a86.92,86.92,0,0,0-42-10.75A89.42,89.42,0,0,0,256,437.11,89.42,89.42,0,0,0,170.25,373a86.92,86.92,0,0,0-42,10.75c12.78-23.14,14.48-50.73,3.84-76.44s-31.33-44-56.69-51.32c25.36-7.34,46.05-25.63,56.69-51.32s8.94-53.3-3.84-76.44a87,87,0,0,0,42,10.75A89.42,89.42,0,0,0,256,74.88,89.42,89.42,0,0,0,341.74,139a87,87,0,0,0,42-10.75c-12.78,23.14-14.48,50.73-3.84,76.44s31.33,44,56.69,51.32C411.21,263.33,390.52,281.63,379.88,307.32ZM224,176a48,48,0,1,0,48,48A48,48,0,0,0,224,176Zm0,64a16,16,0,1,1,16-16A16,16,0,0,1,224,240Zm80,48a16,16,0,1,0,16,16A16,16,0,0,0,304,288Z" class=""></path></svg>
+          </div>
+      </div>
+      <p class="txt">
+          <b class="conf">COVID-19</b> olarak adlandırılan virüsten dolayı ilk ölüm. Bu solunum yolu hastalığı, yıllar ilerledikçe mutasyona uğrayıp insanlığı uğraşturacak salgınların ilk dalgası olacaktır.
+      </p>
+  </div>
+  <div class="line">
+      <div class="date">6 Haziran 2021</div>
+      <div class="horizon">
+          <div class="icon">
+              <i class="fas fa-syringe"></i>
+          </div>
+      </div>
+      <p class="txt">
+          Geleneksel aşıların yanı sıra mRNA aşılarının da etkisiyle COVID-19 pandemisi yavaşlamaya başlar.
+      </p>
+  </div>
+  <div class="line">
+      <div class="date">9 MART 2022</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg style="transform:rotate(180deg) translate(50% , 50%);"  aria-hidden="true" focusable="false" data-prefix="fad" data-icon="users" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" ><g class="fa-group"><path fill="currentColor" d="M96 224a64 64 0 1 0-64-64 64.06 64.06 0 0 0 64 64zm480 32h-64a63.81 63.81 0 0 0-45.1 18.6A146.27 146.27 0 0 1 542 384h66a32 32 0 0 0 32-32v-32a64.06 64.06 0 0 0-64-64zm-512 0a64.06 64.06 0 0 0-64 64v32a32 32 0 0 0 32 32h65.9a146.64 146.64 0 0 1 75.2-109.4A63.81 63.81 0 0 0 128 256zm480-32a64 64 0 1 0-64-64 64.06 64.06 0 0 0 64 64z" class="fa-secondary"></path><path fill="currentColor" d="M396.8 288h-8.3a157.53 157.53 0 0 1-68.5 16c-24.6 0-47.6-6-68.5-16h-8.3A115.23 115.23 0 0 0 128 403.2V432a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48v-28.8A115.23 115.23 0 0 0 396.8 288zM320 256a112 112 0 1 0-112-112 111.94 111.94 0 0 0 112 112z" class="fa-primary"></path></g></svg>
+          </div>
+      </div>
+      <p class="txt">
+         Kemal Boratav, Suriye mültecisi 5 yaşındaki bir Türkmen çocuğu evlat edinir. <b class="conf">Tomris</b> adındaki bu kız 272 IQ ile insanlık tarihinde ölçülen en yüksek zekaya sahiptir.
+      </p>
+  </div>
+  <div class="line">
+      <div class="date">10 Kasım 2023</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="wolf-pack-battalion" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-wolf-pack-battalion fa-w-16 fa-7x"><path fill="currentColor" d="M267.73 471.53l10.56 15.84 5.28-12.32 5.28 7V512c21.06-7.92 21.11-66.86 25.51-97.21 4.62-31.89-.88-92.81 81.37-149.11-8.88-23.61-12-49.43-2.64-80.05C421 189 447 196.21 456.43 239.73l-30.35 8.36c11.15 23 17 46.76 13.2 72.14L412 313.18l-6.16 33.43-18.47-7-8.8 33.39-19.35-7 26.39 21.11 8.8-28.15L419 364.2l7-35.63 26.39 14.52c.25-20 7-58.06-8.8-84.45l26.39 5.28c4-22.07-2.38-39.21-7.92-56.74l22.43 9.68c-.44-25.07-29.94-56.79-61.58-58.5-20.22-1.09-56.74-25.17-54.1-51.9 2-19.87 17.45-42.62 43.11-49.7-44 36.51-9.68 67.3 5.28 73.46 4.4-11.44 17.54-69.08 0-130.2-40.39 22.87-89.65 65.1-93.2 147.79l-58 38.71-3.52 93.25L369.78 220l7 7-17.59 3.52-44 38.71-15.84-5.28-28.1 49.25-3.52 119.64 21.11 15.84-32.55 15.84-32.55-15.84 21.11-15.84-3.52-119.64-28.15-49.26-15.84 5.28-44-38.71-17.58-3.51 7-7 107.33 59.82-3.52-93.25-58.06-38.71C185 65.1 135.77 22.87 95.3 0c-17.54 61.12-4.4 118.76 0 130.2 15-6.16 49.26-36.95 5.28-73.46 25.66 7.08 41.15 29.83 43.11 49.7 2.63 26.74-33.88 50.81-54.1 51.9-31.65 1.72-61.15 33.44-61.59 58.51l22.43-9.68c-5.54 17.53-11.91 34.67-7.92 56.74l26.39-5.28c-15.76 26.39-9.05 64.43-8.8 84.45l26.39-14.52 7 35.63 24.63-5.28 8.8 28.15L153.35 366 134 373l-8.8-33.43-18.47 7-6.16-33.43-27.27 7c-3.82-25.38 2-49.1 13.2-72.14l-30.35-8.36c9.4-43.52 35.47-50.77 63.34-54.1 9.36 30.62 6.24 56.45-2.64 80.05 82.25 56.3 76.75 117.23 81.37 149.11 4.4 30.35 4.45 89.29 25.51 97.21v-29.83l5.28-7 5.28 12.32 10.56-15.84 11.44 21.11 11.43-21.1zm79.17-95L331.06 366c7.47-4.36 13.76-8.42 19.35-12.32-.6 7.22-.27 13.84-3.51 22.84zm28.15-49.26c-.4 10.94-.9 21.66-1.76 31.67-7.85-1.86-15.57-3.8-21.11-7 8.24-7.94 15.55-16.32 22.87-24.68zm24.63 5.28c0-13.43-2.05-24.21-5.28-33.43a235 235 0 0 1-18.47 27.27zm3.52-80.94c19.44 12.81 27.8 33.66 29.91 56.3-12.32-4.53-24.63-9.31-36.95-10.56 5.06-12 6.65-28.14 7-45.74zm-1.76-45.74c.81 14.3 1.84 28.82 1.76 42.23 19.22-8.11 29.78-9.72 44-14.08-10.61-18.96-27.2-25.53-45.76-28.16zM165.68 376.52L181.52 366c-7.47-4.36-13.76-8.42-19.35-12.32.6 7.26.27 13.88 3.51 22.88zm-28.15-49.26c.4 10.94.9 21.66 1.76 31.67 7.85-1.86 15.57-3.8 21.11-7-8.24-7.93-15.55-16.31-22.87-24.67zm-24.64 5.28c0-13.43 2-24.21 5.28-33.43a235 235 0 0 0 18.47 27.27zm-3.52-80.94c-19.44 12.81-27.8 33.66-29.91 56.3 12.32-4.53 24.63-9.31 37-10.56-5-12-6.65-28.14-7-45.74zm1.76-45.74c-.81 14.3-1.84 28.82-1.76 42.23-19.22-8.11-29.78-9.72-44-14.08 10.63-18.95 27.23-25.52 45.76-28.15z" class=""></path></svg>
+          </div>
+      </div>
+      <p class="txt">
+          Türk Polis Özel Harekat taaruz timi <b class="conf">BÖRÜ</b> resmi kayıtlardan aniden kaybolur. Tüm ekip üyelerinin bilgileri silinir.
+      </p>
+  </div>
+
+  <div class="line">
+      <div class="date">23 Aralık 2023</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="microchip" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-microchip fa-w-16 fa-7x"><path fill="currentColor" d="M368 0H144c-26.51 0-48 21.49-48 48v416c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zm16 464c0 8.822-7.178 16-16 16H144c-8.822 0-16-7.178-16-16V48c0-8.822 7.178-16 16-16h224c8.822 0 16 7.178 16 16v416zm128-358v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z" class=""></path></svg>
+          </div>
+      </div>
+      <p class="txt">
+         Google DeepMind şirketi, gizlice, ilk <b class="conf">BETA</b> seviyesi Yapay Zekayı'yı icat ettiğini teyid eder.Bu, tutarlı olarak Turing Testini geçebilen ilk yapay zeka örneği olarak tarihe geçecektir.
+      </p>
+  </div>
+
+  <div class="line">
+      <div class="date">3 NISAN 2024</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="person-sign" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-person-sign fa-w-16 fa-7x"><path fill="currentColor" d="M501.5 66.7l-67.6-24.6 5.5-15c3-8.3-1.3-17.5-9.6-20.5l-15-5.5c-8.3-3-17.5 1.3-20.5 9.6l-5.5 15-67.7-24.6C310-3 302.5 5.6 300.6 10.6l-43.8 120.3c-3 8.3 1.3 17.5 9.6 20.5L334 176l-15.8 43.5s-49.9-17.1-49.5-16.5l-50.5-58.6C207.8 134 193.4 128 178.6 128h-62.9c-21.4 0-40.5 11.9-50.1 30.9L2.5 285.3c-5.9 11.9-1.1 26.3 10.7 32.2 14.1 7 27.4-1.3 32.2-10.7L96 205.7v96.7L72.2 484.9c-1.7 13.2 7.6 25.2 20.7 26.9 1 .1 2.1.2 3.1.2 11.9 0 22.2-8.8 23.8-20.9L141 328h14l51.2 78.2c1.1 1.4 1.7 3.2 1.7 5V488c0 13.2 10.7 24 24 24 13.2 0 24-10.7 24-24v-76.8c0-12.7-4.3-25.1-10.9-33.1l-53.1-81.2V187.3l41.6 48.3c6.1 6.1 13.6 10.8 21.9 13.6l46.3 15.4-13.9 38.3c-3 8.3 1.3 17.5 9.6 20.5l15 5.5c8.3 3 17.5-1.3 20.5-9.6l46.2-126.9 67.6 24.6c11.3 4.1 18.7-4.7 20.5-9.6L511 87.2c3.1-8.3-1.2-17.5-9.5-20.5zM433.1 161l-120.2-43.8 21.9-60.1L455 100.9 433.1 161zM144 96.1c26.5 0 48-21.5 48-48s-21.5-48-48-48-48 21.5-48 48 21.5 48 48 48z" class=""></path></svg>
+          </div>
+      </div>
+      <p class="txt">
+          <b class="conf">COVID-24</b> pandemisi.Dördüncü evrim olan bu virüsün kaba ölüm oranı tüm yaş gruplarında COVID-19'dan yüz defa fazla; %13'tür. Batı ülkelerinde yaşayan ve izolasyondan bıkan genç protestocular, bu yeni belanın genç yaşları es geçmeyeceğini ve milyonlarca öldüreceğini ciddiye almadan sokaklara iner.
+      </p>
+  </div>
+
+
+  <div class="line">
+      <div class="date">30 Eylül 2024</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="virus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-virus fa-w-16 fa-5x"><path fill="currentColor" d="M483.55,227.55H462c-50.68,0-76.07-61.27-40.23-97.11L437,115.19A28.44,28.44,0,0,0,396.8,75L381.56,90.22A55.74,55.74,0,0,1,341.74,107c-29.24,0-57.29-22.7-57.29-57V28.44a28.45,28.45,0,0,0-56.9,0V50c0,34.29-28.05,57-57.29,57a55.7,55.7,0,0,1-39.82-16.77L115.2,75A28.44,28.44,0,0,0,75,115.19l15.25,15.25c35.84,35.84,10.45,97.11-40.23,97.11H28.45a28.45,28.45,0,1,0,0,56.89H50c50.68,0,76.07,61.28,40.23,97.12L75,396.8A28.45,28.45,0,0,0,115.2,437l15.24-15.25A55.7,55.7,0,0,1,170.25,405c29.25,0,57.3,22.7,57.3,57v21.54a28.45,28.45,0,0,0,56.9,0V462c0-34.29,28.05-57,57.3-57a55.7,55.7,0,0,1,39.81,16.77L396.8,437A28.45,28.45,0,0,0,437,396.8l-15.25-15.24c-35.84-35.84-10.45-97.12,40.23-97.12h21.54a28.45,28.45,0,1,0,0-56.89ZM379.88,307.32c-10.64,25.71-8.94,53.3,3.84,76.44a86.92,86.92,0,0,0-42-10.75A89.42,89.42,0,0,0,256,437.11,89.42,89.42,0,0,0,170.25,373a86.92,86.92,0,0,0-42,10.75c12.78-23.14,14.48-50.73,3.84-76.44s-31.33-44-56.69-51.32c25.36-7.34,46.05-25.63,56.69-51.32s8.94-53.3-3.84-76.44a87,87,0,0,0,42,10.75A89.42,89.42,0,0,0,256,74.88,89.42,89.42,0,0,0,341.74,139a87,87,0,0,0,42-10.75c-12.78,23.14-14.48,50.73-3.84,76.44s31.33,44,56.69,51.32C411.21,263.33,390.52,281.63,379.88,307.32ZM224,176a48,48,0,1,0,48,48A48,48,0,0,0,224,176Zm0,64a16,16,0,1,1,16-16A16,16,0,0,1,224,240Zm80,48a16,16,0,1,0,16,16A16,16,0,0,0,304,288Z" class=""></path></svg>
+          </div>
+      </div>
+      <p class="txt">
+          COVID-24 yüzünden bazı ülkelerde toplumsal düzel topyekun çöker. Ölü sayısı 200 milyona ulaşınca salgının ciddiyetini anlayan batı gençliğine toplu depresyn ve histeri görülmeye başlanır.
+      </p>
+  </div>
+
+  <div class="line">
+      <div class="date">31 ocak 2025</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="virus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-virus fa-w-16 fa-5x"><path fill="currentColor" d="M483.55,227.55H462c-50.68,0-76.07-61.27-40.23-97.11L437,115.19A28.44,28.44,0,0,0,396.8,75L381.56,90.22A55.74,55.74,0,0,1,341.74,107c-29.24,0-57.29-22.7-57.29-57V28.44a28.45,28.45,0,0,0-56.9,0V50c0,34.29-28.05,57-57.29,57a55.7,55.7,0,0,1-39.82-16.77L115.2,75A28.44,28.44,0,0,0,75,115.19l15.25,15.25c35.84,35.84,10.45,97.11-40.23,97.11H28.45a28.45,28.45,0,1,0,0,56.89H50c50.68,0,76.07,61.28,40.23,97.12L75,396.8A28.45,28.45,0,0,0,115.2,437l15.24-15.25A55.7,55.7,0,0,1,170.25,405c29.25,0,57.3,22.7,57.3,57v21.54a28.45,28.45,0,0,0,56.9,0V462c0-34.29,28.05-57,57.3-57a55.7,55.7,0,0,1,39.81,16.77L396.8,437A28.45,28.45,0,0,0,437,396.8l-15.25-15.24c-35.84-35.84-10.45-97.12,40.23-97.12h21.54a28.45,28.45,0,1,0,0-56.89ZM379.88,307.32c-10.64,25.71-8.94,53.3,3.84,76.44a86.92,86.92,0,0,0-42-10.75A89.42,89.42,0,0,0,256,437.11,89.42,89.42,0,0,0,170.25,373a86.92,86.92,0,0,0-42,10.75c12.78-23.14,14.48-50.73,3.84-76.44s-31.33-44-56.69-51.32c25.36-7.34,46.05-25.63,56.69-51.32s8.94-53.3-3.84-76.44a87,87,0,0,0,42,10.75A89.42,89.42,0,0,0,256,74.88,89.42,89.42,0,0,0,341.74,139a87,87,0,0,0,42-10.75c-12.78,23.14-14.48,50.73-3.84,76.44s31.33,44,56.69,51.32C411.21,263.33,390.52,281.63,379.88,307.32ZM224,176a48,48,0,1,0,48,48A48,48,0,0,0,224,176Zm0,64a16,16,0,1,1,16-16A16,16,0,0,1,224,240Zm80,48a16,16,0,1,0,16,16A16,16,0,0,0,304,288Z" class=""></path></svg>
+          </div>
+      </div>
+      <p class="txt">
+
+          <b class="conf">Yellowstone</b> süper volkanı patlar. Afet bölgesi kuzeybatı Birleşik Devletlerin büyük kısımlarının boşaltılmasına sebep olur. Kaliforniya ve Oregon bir süreliğine diğer eyaletlerden ulaşım olarak tamamen kopmak zorunda kalır. Ülkeyi kar gibi kalın kül örtüsü kaplayınca, tarım mahvolacaktır.
+      </p>
+  </div>
+  <div class="line">
+      <div class="date">2 Mayıs 2025</div>
+      <div class="horizon">
+          <div class="icon">
+              <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="virus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-virus fa-w-16 fa-5x"><path fill="currentColor" d="M483.55,227.55H462c-50.68,0-76.07-61.27-40.23-97.11L437,115.19A28.44,28.44,0,0,0,396.8,75L381.56,90.22A55.74,55.74,0,0,1,341.74,107c-29.24,0-57.29-22.7-57.29-57V28.44a28.45,28.45,0,0,0-56.9,0V50c0,34.29-28.05,57-57.29,57a55.7,55.7,0,0,1-39.82-16.77L115.2,75A28.44,28.44,0,0,0,75,115.19l15.25,15.25c35.84,35.84,10.45,97.11-40.23,97.11H28.45a28.45,28.45,0,1,0,0,56.89H50c50.68,0,76.07,61.28,40.23,97.12L75,396.8A28.45,28.45,0,0,0,115.2,437l15.24-15.25A55.7,55.7,0,0,1,170.25,405c29.25,0,57.3,22.7,57.3,57v21.54a28.45,28.45,0,0,0,56.9,0V462c0-34.29,28.05-57,57.3-57a55.7,55.7,0,0,1,39.81,16.77L396.8,437A28.45,28.45,0,0,0,437,396.8l-15.25-15.24c-35.84-35.84-10.45-97.12,40.23-97.12h21.54a28.45,28.45,0,1,0,0-56.89ZM379.88,307.32c-10.64,25.71-8.94,53.3,3.84,76.44a86.92,86.92,0,0,0-42-10.75A89.42,89.42,0,0,0,256,437.11,89.42,89.42,0,0,0,170.25,373a86.92,86.92,0,0,0-42,10.75c12.78-23.14,14.48-50.73,3.84-76.44s-31.33-44-56.69-51.32c25.36-7.34,46.05-25.63,56.69-51.32s8.94-53.3-3.84-76.44a87,87,0,0,0,42,10.75A89.42,89.42,0,0,0,256,74.88,89.42,89.42,0,0,0,341.74,139a87,87,0,0,0,42-10.75c-12.78,23.14-14.48,50.73-3.84,76.44s31.33,44,56.69,51.32C411.21,263.33,390.52,281.63,379.88,307.32ZM224,176a48,48,0,1,0,48,48A48,48,0,0,0,224,176Zm0,64a16,16,0,1,1,16-16A16,16,0,0,1,224,240Zm80,48a16,16,0,1,0,16,16A16,16,0,0,0,304,288Z" class=""></path></svg>
+          </div>
+      </div>
+      <p class="txt">
+          Amerika'nın afetle uğraşmasını fırsat bilen Çin, askeri harcamalarını katsayısal olarak arttırır. Kısa bir süre içinde hava, kara , deniz ve uzayda Birleşik Devletlerin bütçeisni geçerek zirveye oturur. COVID-24 ise nihayet, <b class="conf">500 milyon ölümden sonra aşılar sayesinde durmaya başlar.</b>
+      </p>
+  </div>
+
+
+</div>
+<script>
+  const line = document.querySelectorAll('.line');
+      line.forEach(function(l,k){
+          l.style.display = 'none';
+          l.style.opacity = "0";
+          setTimeout(function(){
+              l.classList.add("anim");
+              l.addEventListener("animationend", function() {
+   window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+});
+           
+            
+            if(k == line.length - 1){
+              setTimeout(function(){
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                 document.body.style.overflowY = 'auto';
+              },2000);
+            }
+          },1000 + (k+1) * 300);
+        
+      });
+
+
+
+(function splascreen(){
+document.body.style.overflow = 'hidden';
+
+
+})();
+</script> -->
+
+ 
+
+
+ <!-- <section class="timeline">
+  <ul>
+    <li>
+      <div>
+        <time><b>SEM 1</b></time>
+        <div class="discovery">
+          <h3>Strides & Winspire</h3>
+          <p>
+            Communication Skill Enhancement
+          </p>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time><b>SEM 2</b></time>
+        <div class="discovery">
+          <h3> SMART</h3>s
+          <p><h2>A clean timeline design, with animated links</h2>
+<div class="timeline"> 
+  <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+    <div class="timeline__event__icon ">
+      <i class="lni-cake"></i>
+
+    </div>
+    <div class="timeline__event__date">
+      20-08-2019
+    </div>
+    <div class="timeline__event__content ">
+      <div class="timeline__event__title">
+        Birthday
+      </div>
+      <div class="timeline__event__description">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, nam! Nam eveniet ut aliquam ab asperiores, accusamus iure veniam corporis incidunt reprehenderit accusantium id aut architecto harum quidem dolorem in!</p>
+      </div>
+    </div>
+  </div>
+  <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+    <div class="timeline__event__icon">
+      <i class="lni-burge
+            Aptitude Crash Course
+          </p>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time><b>SEM 3</b></time>
+        <div class="discovery">
+          <h3>Strides & Winspire</h3>
+          <p>
+            British English Certification Training 
+          </p>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time><b>SEM 4</b></time>
+        <div class="discovery">
+          <h3>MY SLATE</h3>
+          <p>
+            Datastructures Training
+          </p>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time><b>SEM 5</b></time>
+        <div class="discovery">
+          <h3>MY SLATE</h3>
+          <p>
+            Advanced Datastructures Training
+          </p>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time><b>SEM 6</b></time>
+        <div class="discovery">
+          <h4><b>ASPIRING MINDS  MY SLATE</b></h4>
+          <p>
+            Trainingfor dream companies,AMCAT Assesment,Aptitude Training
+        
+    
+          </p>
+        </div>
+        
+      </div>
+    </li>
+    <li>
+      <div>
+        <time><b>SEM 7</b></time>
+        <div class="discovery">
+          <h4><b>CoCubes AND ASPIRING MINDS</b></h4>
+          <p>
+            CoCubes,AMCAT,Company specific Aptitude
+          </p>
+        </div>
+        
+      </div>
+    </li> -->
+ 
+  <!-- </ul>
+</section>  -->
+
+          <!-- </div>
+      </div>
+  </div>
+</div>
+<br> -->
+
+
+
+
+
+
+
+<!-- entrepreneurs end -->
+<!--heigher education -->
+
+<!-- <h1 class="text24">Higher education</h1>
+<section id="education">
+  <div class="wrapperhigher">
+    <h1 class="ji">Parallax Flipping Cards</h1>
+    <div class="cols">
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+                          <div class="inner">
+                              <p>Diligord</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/511/511/)">
+                          <div class="inner">
+                              <p>Rocogged</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+                          <div class="inner">
+                              <p>Strizzes</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+                          <div class="inner">
+                              <p>Clossyo</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/504/504/)">
+                          <div class="inner">
+                              <p>Rendann</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/505/505/)">
+                          <div class="inner">
+                              <p>Reflupper</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/506/506/)">
+                          <div class="inner">
+                              <p>Acirassi</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col" ontouchstart="this.classList.toggle('hover');">
+                  <div class="containerhigher">
+                      <div class="front" style="background-image: url(https://unsplash.it/508/508/)">
+                          <div class="inner">
+                              <p>Sohanidd</p>
+                <span>Lorem ipsum</span>
+                          </div>
+                      </div>
+                      <div class="back">
+                          <div class="inner">
+                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+   </div>
+
+</section> -->
+<!-- hidhereducation end -->
+
+<!-- entrepreneurs -->
+<!-- <section id="entrep" class="entre" >
+  <h1 class="text24">Entrepreneurs </h1>
+ 
+  
+    <section id="testim" class="testim">
+             <div class="testim-cover">
+                <div class="wrap">
+    
+                    <span id="right-arrow" class="arrow right fa fa-chevron-right"></span>
+                    <span id="left-arrow" class="arrow left fa fa-chevron-left "></span>
+                    <ul id="testim-dots" class="dots">
+                        <li class="dot active"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                        <li class="dot"></li>
+                    </ul>
+                    <div id="testim-content" class="cont">
+                        
+                        <div class="active">
+                            <div class="img"><img src="https://in.bmscdn.com/iedb/artist/placement/images/website/poster/large/kartik-aaryan-1045198-08-12-2017-06-34-11.jpg" alt=""></div>
+                            <h2>Lorem P. Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        </div>
+    
+                        <div>
+                            <div class="img"><img src="https://timesofindia.indiatimes.com/thumb/msid-75752690,width-800,height-600,resizemode-4/75752690.jpg" alt=""></div>
+                            <h2>Mr. Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        </div>
+    
+                        <div>
+                            <div class="img"><img src="https://p16.muscdn.com/img/musically-maliva-obj/1627333501517830~c5_720x720.jpeg" alt=""></div>
+                            <h2>Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        </div>
+    
+                        <div>
+                            <div class="img"><img src="https://p16-sg-default.akamaized.net/aweme/1080x1080/tiktok-obj/1666413671597057.jpeg" alt=""></div>
+                            <h2>Lorem De Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        </div>
+    
+                        <div>
+                            <div class="img"><img src="https://encrypted-tbn0.gstatic.com/placement/images?q=tbn%3AANd9GcSKLJe1Lrz2N3ufVSwQokSJ79jGBbIptXuVnsdxMmNUlE14ohwp&usqp=CAU" alt=""></div>
+                            <h2>Ms. Lorem R. Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>                    
+                        </div>
+    
+                    </div>
+    
+                </div>
+             </div>
+             
+        </section>
+    
+ 
+  
+</section> -->
+
+
+<!-- <br>
+<br><br>
+<br> -->
+
+
+<!-- time line js -->
+<script>
+  // script for timeline
+  var items = document.querySelectorAll(".timeline li");
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+
+</script>
+
+<script>
+  // vars
+'use strict'
+var	testim = document.getElementById("testim"),
+  testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+  testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+  testimLeftArrow = document.getElementById("left-arrow"),
+  testimRightArrow = document.getElementById("right-arrow"),
+  testimSpeed = 4500,
+  currentSlide = 0,
+  currentActive = 0,
+  testimTimer,
+  touchStartPos,
+  touchEndPos,
+  touchPosDiff,
+  ignoreTouch = 30;
+;
+
+window.onload = function() {
+
+  // Testim Script
+  function playSlide(slide) {
+      for (var k = 0; k < testimDots.length; k++) {
+          testimContent[k].classList.remove("active");
+          testimContent[k].classList.remove("inactive");
+          testimDots[k].classList.remove("active");
+      }
+
+      if (slide < 0) {
+          slide = currentSlide = testimContent.length-1;
+      }
+
+      if (slide > testimContent.length - 1) {
+          slide = currentSlide = 0;
+      }
+
+      if (currentActive != currentSlide) {
+          testimContent[currentActive].classList.add("inactive");            
+      }
+      testimContent[slide].classList.add("active");
+      testimDots[slide].classList.add("active");
+
+      currentActive = currentSlide;
+  
+      clearTimeout(testimTimer);
+      testimTimer = setTimeout(function() {
+          playSlide(currentSlide += 1);
+      }, testimSpeed)
+  }
+
+  testimLeftArrow.addEventListener("click", function() {
+      playSlide(currentSlide -= 1);
+  })
+
+  testimRightArrow.addEventListener("click", function() {
+      playSlide(currentSlide += 1);
+  })    
+
+  for (var l = 0; l < testimDots.length; l++) {
+      testimDots[l].addEventListener("click", function() {
+          playSlide(currentSlide = testimDots.indexOf(this));
+      })
+  }
+
+  playSlide(currentSlide);
+
+  // keyboard shortcuts
+  document.addEventListener("keyup", function(e) {
+      switch (e.keyCode) {
+          case 37:
+              testimLeftArrow.click();
+              break;
+              
+          case 39:
+              testimRightArrow.click();
+              break;
+
+          case 39:
+              testimRightArrow.click();
+              break;
+
+          default:
+              break;
+      }
+  })
+  
+  testim.addEventListener("touchstart", function(e) {
+      touchStartPos = e.changedTouches[0].clientX;
+  })
+
+  testim.addEventListener("touchend", function(e) {
+      touchEndPos = e.changedTouches[0].clientX;
+    
+      touchPosDiff = touchStartPos - touchEndPos;
+    
+      console.log(touchPosDiff);
+      console.log(touchStartPos);	
+      console.log(touchEndPos);	
+
+    
+      if (touchPosDiff > 0 + ignoreTouch) {
+          testimLeftArrow.click();
+      } else if (touchPosDiff < 0 - ignoreTouch) {
+          testimRightArrow.click();
+      } else {
+        return;
+      }
+    
+  })
+}
+</script>
+
+<footer>
+  <div class="">
+    <div class="row" style="text-align: center;">
+      <a href="dev.html"><div class="col-md-12">
+        <p style="color: #fff;">Developed by Students of IT Department © 2023  
+        </div></a>
+      
+    </div>
+  </div>
+
+</footer>
+
+<!-- nav -->
+<!-- JavaScript ./Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="./lib/easing/easing.min.js"></script>
+<script src="./lib/waypoints/waypoints.min.js"></script>
+<script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="./lib/isotope/isotope.pkgd.min.js"></script>
+<script src="./lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- Template Javascript -->
+
+<script src="./assets/js/custom.js"></script>
+
+
+<a href="hi.html">hii</a>
+
+
+
+
+</body>
+</html>

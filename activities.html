@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Activities</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/samplea.css">
+
+	<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <style>
+	/* mani sectionn */
+
+	@import url('https://fonts.googleapis.com/css?family=carro:400i|Rubik:400,700&display=swap');
+ :root {
+	 --d: 700ms;
+	 --e: cubic-bezier(0.19, 1, 0.22, 1);
+	 --font-sans: 'Rubik', sans-serif;
+	 --font-serif: 'carro', serif;
+}
+ /* * {
+	 box-sizing: border-box;
+} */
+ /* html, body {
+	 height: 100%;
+} */
+
+ .page-con {
+	 display: grid;
+	 grid-gap: 1rem;
+	 padding: 1rem;
+	 max-width: 1024px;
+	 margin: 0 auto;
+	 font-family: var(--font-sans);
+}
+ @media (min-width: 600px) {
+	 .page-con {
+		 grid-template-columns: repeat(2, 1fr);
+	}
+}
+ @media (min-width: 800px) {
+	 .page-con {
+		 grid-template-columns: repeat(4, 1fr);
+	}
+}
+ .carr {
+	 border-radius: 20px;
+	 position: relative;
+	 display: flex;
+	 align-items: flex-end;
+	 overflow: hidden;
+	 padding: 1rem;
+	 width: 100%;
+	 text-align: center;
+	 color: whitesmoke;
+	 /* background-color: whitesmoke; */
+	 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+ @media (min-width: 600px) {
+	 .carr {
+		 height: 350px;
+	}
+}
+ .carr:before {
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 110%;
+	 background-size: cover;
+	 background-position: 0 0;
+	 transition: transform calc(var(--d) * 1.5) var(--e);
+	 pointer-events: none;
+}
+ .carr:after {
+	 content: '';
+	 display: block;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 200%;
+	 pointer-events: none;
+	 background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+	 transform: translateY(-50%);
+	 transition: transform calc(var(--d) * 2) var(--e);
+}
+ .carr:nth-child(1):before {
+	 background-image: url(./assets/images/sports1.jpg);
+}
+ .carr:nth-child(2):before {
+	 background-image: url(./assets/images/sports2.jpg);
+}
+ .carr:nth-child(3):before {
+	 background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+ .carr:nth-child(4):before {
+	 background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+}
+ .con {
+	 position: relative;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 width: 100%;
+	 padding: 1rem;
+	 transition: transform var(--d) var(--e);
+	 z-index: 1;
+}
+ .con > * + * {
+	 margin-top: 1rem;
+}
+ .titttl {
+	 font-size: 1.3rem;
+	 font-weight: bold;
+	 line-height: 1.2;
+}
+ .cop {
+	 font-family: var(--font-serif);
+	 font-size: 1.125rem;
+	 font-style: italic;
+	 line-height: 1.35;
+}
+ .btn {
+	 cursor: pointer;
+	 margin-top: 1.5rem;
+	 padding: 0.75rem 1.5rem;
+	 font-size: 0.65rem;
+	 font-weight: bold;
+	 letter-spacing: 0.025rem;
+	 text-transform: uppercase;
+	 color: white;
+	 background-color: black;
+	 border: none;
+}
+ .btn:hover {
+	 background-color: #0d0d0d;
+}
+ .btn:focus {
+	 outline: 1px dashed yellow;
+	 outline-offset: 3px;
+}
+ @media (hover: hover) and (min-width: 600px) {
+	 .carr:after {
+		 transform: translateY(0);
+	}
+	 .con {
+		 transform: translateY(calc(100% - 4.5rem));
+	}
+	 .con > *:not(.titttl) {
+		 opacity: 0;
+		 transform: translateY(1rem);
+		 transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+	}
+	 .carr:hover, .carr:focus-within {
+		 align-items: center;
+	}
+	 .carr:hover:before, .carr:focus-within:before {
+		 transform: translateY(-4%);
+	}
+	 .carr:hover:after, .carr:focus-within:after {
+		 transform: translateY(-50%);
+	}
+	 .carr:hover .con, .carr:focus-within .con {
+		 transform: translateY(0);
+	}
+	 .carr:hover .con > *:not(.titttl), .carr:focus-within .con > *:not(.titttl) {
+		 opacity: 1;
+		 transform: translateY(0);
+		 transition-delay: calc(var(--d) / 8);
+	}
+	 .carr:focus-within:before, .carr:focus-within:after, .carr:focus-within .con, .carr:focus-within .con > *:not(.titttl) {
+		 transition-duration: 0s;
+	}
+}
+ 
+  </style>
+</head>
+<body>
+	<header class="bgcolor">
+		<header class="main-header clearfix" role="header">
+		  <div class="logo"> 
+		   <a href="https://stjosephs.ac.in/index.html" class="sjce"><em>S</em><em style="text-transform: lowercase;">t.</em>  JOSEPH'S</a>
+		 </div>
+		  <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a> 
+		  <nav id="menu" class="main-nav resp" role="navigation">
+		   <ul class="main-menu">
+			 <li><a href="index.html">Home</a></li>
+			 <li class="has-submenu"><a href="aboutus.html">About Us</a></li> 
+			  <li><a href="facaulty.html">FACULTY</a></li>
+			  <li><a href="lab.html">LAB</a></li>
+			 <li><a href="placements.html" class="external">PLACEMENTS</a></li>
+			 <li><a href="randd.html">R&D</a></li>
+			 <li><a href="academics.html">ACADEMICS</a></li>
+			 <li><a href="activities.html">ACTIVITIES</a></li>
+		   </ul>
+		 </nav> 
+		</header>
+		</header> 
+
+    <style>
+        body 
+        {
+            background-image:url('assets/images/back.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/images/sih1.jpg");          
+            height: 40%;          
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+          }
+          
+        
+    </style>
+
+    <div class="hero-image">
+      </div>
+
+	<section class="portfolio" id="portfolio">
+
+		  
+            <div class="main-text">
+                <div class="neon_lab" style="padding-top:100px;">
+                <center><h4>ACTIVITIES</h4></center>
+                </div>
+            </div>
+
+		<a href="./activities/iv.html">
+		<div class="portfolio-content">
+			<div class="row">
+				<img src="./assets/images/iv1_Easy-Resize.com.jpg">
+				<div class="main-row">
+				</div>
+				<h3>INDUSTRIAL VISITS</h3>
+			</div>
+		</a>
+
+		<a href="./activities/guestlecture.html">
+			<div class="row">
+				<img src="./assets/images/guest lecture_Easy-Resize.com.jpg">
+				<div class="main-row">
+				</div>
+				<h3>GUEST LECTURE</h3>
+				<br>
+			</div>
+		</a>
+
+		<a href="./activities/symposiyum.html">
+			<div class="row">
+				<img src="./assets/images/Sympo_Easy-Resize.com.jpg">
+				<div class="main-row">
+				</div>
+				<br>
+				<h3>NATIONAL LEVEL SYMPOSIUM WINNERS</h3>
+				<br>
+			</div>
+		</a>
+
+
+		</div>
+
+	</section>
+
+
+   
+
+    <section class="portfolio" id="portfolio1">
+
+		
+		<div class="portfolio-content1">
+			<a href="./activities/cognizant_club.html">
+			<div class="row">
+				<img src="./assets/images/cts.jpg">
+				<div class="main-row">
+				</div>
+				<h3>COGNIZANT STUDENTS CLUB</h3>
+			</div>
+			</a>
+
+			<a href="./activities/google_students_club.html">
+			<div class="row">
+				<img src="./assets/images/gdsc.jpg">
+				<div class="main-row">
+				</div>
+				<h3>GOOGLE DEVELOPER STUDENTS CLUB</h3>
+				<br>
+			</div>
+			</a>
+
+			<a href="./activities/coding_club.html">
+			<div class="row">
+				<img src="assets/images/coding_Easy-Resize.com.jpg">
+				<div class="main-row">
+				</div>
+				<br>
+				<h3>CODING CLUB</h3>
+				<br>
+			</div>
+			</a>
+
+
+		</div>
+
+	</section>
+
+
+    <div class="container">
+        <div class="rows">
+            <div class="col-sm-12">
+                <div class="title">
+                    <h1 class="white" style="text-align: center;margin-top: 10rem;"> STUDENTS <span style="color:#07a8ca;">ACHIEVEMENTS</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="portfolio" id="portfolio1">
+
+		<a href="activities/sa19-20.html">
+		<div class="portfolio-content1">
+			
+			<div class="row">
+				<img src="./assets/images/sih1.jpg">
+				<div class="main-row">
+				</div>
+				<h3>2019-2020</h3>
+			</div></a>
+
+			<a href="./activities/sa20-21.html">
+			<div class="row">
+				<img src="./assets/images/activities2.jpg">
+				<div class="main-row">
+				</div>
+				<h3>2020-2021</h3>
+				<br>
+			</div></a>
+
+
+			<a href="./activities/sa21-22.html">
+
+			<div class="row">
+				<img src="./assets/images/activities1.jpg">
+				<div class="main-row">
+				</div>
+				<br>
+				<h3>2021-2022</h3>
+				<br>
+			</div>
+		</a>
+
+		</div>
+
+	</section>
+	<!-- mani sectionn -->
+	<section>
+
+	<div class="container" style="margin-bottom: 20px;">
+        <div class="rows">
+            <div class="col-sm-12">
+                <div class="title">
+                    <h1 class="white" style="text-align: center;margin-top: 5rem;"> Sports <span style="color:#07a8ca;">Culturals</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<main class="page-con" >
+		
+		<div class="carr">
+			<div class="con">
+				<h2 class="titttl">Ball Batmiton</h2>
+				<p class="cop">Winners</p>
+			</div>
+		</div>
+		<div class="carr">
+			<div class="con">
+				<h2 class="titttl">Basketball</h2>
+				<p class="cop">Winners</p>
+			</div>
+		</div>
+		<!-- <div class="carr">
+			<div class="con">
+				<h2 class="titttl">Desert Destinations</h2>
+				<p class="cop">It's the desert you've always dreamed of</p>
+			</div>
+		</div>
+		<div class="carr">
+			<div class="con">
+				<h2 class="titttl">Explore The Galaxy</h2>
+				<p class="cop">Seriously, straight up, just blast off into outer space today</p>
+			</div>
+		</div> -->
+	</section>
+	
+	<footer>
+		<div class="container">
+		  <div class=" mx-auto" style="">
+			<a href="dev.html"><div class="col-md-12">
+			  <p>Developed by Students of IT Department © 2023  
+			  </div></a>
+			
+		  </div>
+		</div>
+	  </footer>
+
+
+	<script type="text/javascript" src="script.js"></script>
+
+	<!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./assets/js/isotope.min.js"></script>
+  <script src="./assets/js/owl-carousel.js"></script>
+  <script src="./assets/js/lightbox.js"></script>
+  <script src="./assets/js/tabs.js"></script>
+  <script src="./assets/js/video.js"></script>
+  <script src="./assets/js/slick-slider.js"></script>
+  <script src="./assets/js/custom.js"></script>
+  <script>
+	  //according to loftblog tut
+	  $('.nav li:first').addClass('active');
+
+	  var showSection = function showSection(section, isAnimate) {
+		var
+		direction = section.replace(/#/, ''),
+		reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+		reqSectionPos = reqSection.offset().top - 0;
+
+		if (isAnimate) {
+		  $('body, html').animate({
+			scrollTop: reqSectionPos },
+		  800);
+		} else {
+		  $('body, html').scrollTop(reqSectionPos);
+		}
+
+	  };
+
+	  var checkSection = function checkSection() {
+		$('.section').each(function () {
+		  var
+		  $this = $(this),
+		  topEdge = $this.offset().top - 80,
+		  bottomEdge = topEdge + $this.height(),
+		  wScroll = $(window).scrollTop();
+		  if (topEdge < wScroll && bottomEdge > wScroll) {
+			var
+			currentId = $this.data('section'),
+			reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+			reqLink.closest('li').addClass('active').
+			siblings().removeClass('active');
+		  }
+		});
+	  };
+
+	  $('.main-menu, .scroll-to-section').onclick('click', 'a', function (e) {
+		if($(e.target).hasClass('external')) {
+		  return;
+		}
+		e.preventDefault();
+		$('#menu').removeClass('active');
+		showSection($(this).attr('href'), true);
+	  });
+
+	  $(window).scroll(function () {
+		checkSection();
+	  });
+  </script>
+
+  <script type="text/javascript">
+	$(document).ready(function(){
+	  $('a[href^="#"]').on('click',function (e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+		   'scrollTop': $target.offset().top
+		}, 900, 'swing');
+		});
+	});
+  </script>
+
+</body>
+
+</html>

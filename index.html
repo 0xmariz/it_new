@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name= content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>IT Department</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+
+    <style>
+      body {
+  background: #333;
+}
+
+/*----------------------------*\
+      Coverflow Album Slider 
+\*-----------------------------*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fadeex;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeex {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* 
+the above css are from entrpruner slider */
+      .my-form {
+          color: #305896;
+      }
+      .my-form .btn-default {
+          background-color: #305896;
+          color: #fff;
+          border-radius: 0;
+      }
+      .my-form .btn-default:hover {
+          background-color: #4498C6;
+          color: #fff;
+      }
+      .my-form .form-control {
+          border-radius: 0;
+      }
+
+      /* book */
+      .bookWrapper {
+  width:700px;
+  height:450px; 
+  /* //multiply by 1.3 to get proper height */
+}
+.bookBg {
+  position:relative;
+  background-color: #000000;
+  width:100%;
+  height:100%;
+  border-radius: 12px;  
+}
+.centerClass {
+  position:absolute;
+  left:50%;
+  top:50%;
+}
+.pageBg {
+  background-color: #ffffff;
+  width:652px; 
+  height:422px;
+  border-radius: 0px;
+}
+.spineCenter {
+  width:2px; 
+  height:422px;
+  border-radius: 0px;
+  background:rgba(101,101,101,.4);
+}
+.pageWrapper {
+  position:relative;
+  width:325px;
+  height:422px;
+  float: left;
+  -webkit-font-smoothing:antialiased;
+}
+.pageFace {
+  position:absolute;
+  width:325px;
+  height:422px;
+  overflow:hidden;
+  text-align: center;
+}
+.front {
+  background: linear-gradient(to right,  #d9d9d9 0%,#f9f9f9 3%,#ffffff 8%,#ffffff 100%);
+  
+}
+.back {
+  background: linear-gradient(to right,  #ffffff 0%,#ffffff 92%,#f9f9f9 97%,#d9d9d9 100%);
+}
+.pageFoldRight {
+  position: absolute;
+    width:  0px;
+    height: 0px;
+    top:  0;
+    right: 0;
+    border-left-width: 1px;
+    border-left-color: #DDDDDD;
+    border-left-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #DDDDDD;
+    border-bottom-style: solid;
+    box-shadow: -5px 5px 10px #dddddd;
+}
+.pageFoldLeft {
+   position: absolute;
+    width:  0px;
+    height: 0px;
+    top:  0;
+    left: 0;
+    border-right-width: 1px;
+    border-right-color: #DDDDDD;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #DDDDDD;
+    border-bottom-style: solid;
+    box-shadow: 5px 5px 10px #dddddd;
+}
+
+
+     
+
+
+
+    /* hi */
+
+ .grid-container {
+	 columns: 5 200px;
+	 column-gap: 1.5rem;
+	 width: 90%;
+	 margin: 0 auto;
+}
+ .grid-container div {
+	 width: 150px;
+	 margin: 0 1.5rem 1.5rem 0;
+	 display: inline-block;
+	 width: 100%;
+	 border: solid 2px black;
+	 padding: 5px;
+	 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+	 border-radius: 5px;
+	 transition: all 0.25s ease-in-out;
+}
+ .grid-container div:hover img {
+	 filter: grayscale(0);
+}
+ .grid-container div:hover {
+	 border-color: coral;
+}
+ .grid-container div img {
+	 width: 100%;
+	 /* filter: grayscale(100%); */
+	 border-radius: 5px;
+	 transition: all 0.25s ease-in-out;
+}
+ .grid-container div p {
+	 margin: 5px 0;
+	 padding: 0;
+	 text-align: center;
+	 font-style: italic;
+}
+ 
+
+  </style>
+  
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+
+  </head>
+
+<body style="overflow-x: hidden;">
+   <header class="bgcolor">
+   <header class="main-header clearfix" role="header">
+     <div class="logo"> 
+      <a href="https://stjosephs.ac.in/index.html" class="sjce"><em>S</em><em style="text-transform: lowercase;">t.</em>  JOSEPH'S</a>
+    </div>
+     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a> 
+     <nav id="menu" class="main-nav resp" role="navigation">
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li ><a href="aboutus.html">About Us</a></li> 
+         <li><a href="facaulty.html">FACULTY</a></li>
+         <li><a href="lab.html">LAB</a></li>
+        <li><a href="placements.html" class="external">PLACEMENTS</a></li>
+        <li><a href="randd.html">R&D</a></li>
+        <li><a href="academics.html">ACADEMICS</a></li>
+        <li><a href="activities.html">ACTIVITIES</a></li>
+      </ul>
+    </nav> 
+   </header>
+   </header> 
+
+  <!-- ***** Main Banner Area Start ***** -->
+  *****Mani Raj*****
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video"  >
+          <source src="assets/images/IT2.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h2>Welcome to</h2>
+              <h4><em>Information</em> <strong>Technology &</strong><em> AML</em></h4>
+              <div class="main-button1">
+                  <div class="scroll-to-section"><a href="aboutus.html"> 
+                     <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>Discover more</a></div> 
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Explore IT Department</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+              <li><a href='#tabs-1'>ABOUT US</a></li>
+              <li><a href='#tabs-2'>R & D</a></li>
+              <li><a href='#tabs-3'>PLACEMENTS</a></li>
+            </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/ac2.jpg" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>About us</h4>
+                    
+                        <p style="color:#FFF;font-size:23px;  font-weight: bold;">WHO WE ARE</p>
+                        <p style="text-align: justify;">Department of Information Technology with state-of-art research facilities and well
+                          qualified faculty members produces young aspiring Engineers </p>
+                    
+                        <p style="color:#FFF;font-size:23px;  font-weight: bold;">VISION</p>
+                        <p style="text-align: justify;">To achieve and sustain international prominence in education, research and professional
+                          skill development</p>
+
+                        <p style="color:#FFF;font-size:23px;  font-weight: bold;">MISSION</p>
+                        <p style="text-align: justify;">
+                          To set a standard in education by developing the intellectual strength of students and
+                          guiding them to have a sound and updated knowledge in the emerging areas of technology
+                        </p>
+                      
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/josh3.jpg" alt="" style="position:relative !important; top:65px !important;">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>RESEARCH PUBLICATIONS</h4>
+                    <p style="text-align: justify;">St. Joseph′s College of Engineering, ever since its inception in the year 1994, has taken huge strides towards differentiating itself by focusing on pursuit of Innovation and Research by its faculty and students. Many of our faculties are recognized supervisors to guide the Ph.D research scholars. To prove the R&D activities in our college, our faculty members have published many research papers in various National and International Journals and Conferences.</p> 
+                    <button class="rmbutton"><a href="./randd.html" class="rmbutton">Read more</a></button>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="/assets/images/Placemenets.jpg" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>PLACEMENTS</h4>
+                    <p style="text-align:justify;">The uniqueness of Centre for Training and Placement of this prestigious Institution is prevalent through the execution of meticulous planning and systematic schedule. It has been functioning untiringly towards the benefits of the students to strike out a difference in the corporate world. Our college provides a friendly and challenging environment in order to meet the demands of today' s competitive world. As the candle spreads, and the mirror reflects the light, the department spreads the light to reflect the dreams and goals of the students. Instead of waiting for opportunities, opportunities knock at your door. The infrastructure too enhances the facilities of the Training and Placement Programmes.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section video" data-section="section5">
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-md-6 align-self-center">
+          <div class="left-content">
+           
+           
+          </div>
+        </div>
+        <div class="col-md-6">
+          <article class="video-item">
+            <div class="video-caption">
+              <h4>KNOW MORE</h4>
+            </div>
+            <figure>
+              <a href="/aboutus.html"><img src="assets/images/ac1.jpg" style="filter: brightness(80%);"></a>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+ <!-- pop up -->
+ 
+
+  <section class="section courses" data-section="section4" style="padding-top: 50px;">
+    <div class="col text-center" >
+      <div style="margin-bottom: 40px;">
+    <button type = "button" class="collapsible" style="--clr:#0FF0FC"><span>Gallery</span><i></i></button>
+    <div class="content">
+
+   
+      <div class="grid-container" style="padding-top: 50px;" >
+        <div>
+          <img class='grid-item grid-item-1' src='./assets/images/dept img/a1.jpeg' alt=''>
+          
+        </div>
+        <div>
+          <img class='grid-item grid-item-2' src='./assets/images/dept img/a2.jpeg' alt=''>
+         
+        </div>
+        <div>
+          <img class='grid-item grid-item-3' src='./assets/images/dept img/h1.jpeg' alt=''>
+       
+        </div>
+        <div>
+          <img class='grid-item grid-item-4' src='./assets/images/dept img/n1.jpeg' alt=''>
+        
+        </div>
+        <div>
+          <img class='grid-item grid-item-5' src='./assets/images/dept img/n2.jpeg' alt=''>
+         
+        </div>
+        <div>
+          <img class='grid-item grid-item-6' src='./assets/images/dept img/n3.jpeg' alt=''>
+        
+        </div>
+        <div>
+          <img class='grid-item grid-item-7' src='./assets/images/dept img/n4.jpeg' alt=''>
+        
+        </div>
+        <div>
+          <img class='grid-item grid-item-8' src='./assets/images/dept img/n5.jpeg' alt=''>
+          
+        </div>
+        <div>
+          <img class='grid-item grid-item-9' src='./assets/images/dept img/n6.jpeg' alt=''>
+          
+        </div>
+        <div>
+          <img class='grid-item grid-item-10' src='./assets/images/dept img/n20.jpg' alt=''>
+      
+        </div>
+        <div>
+          <img class='grid-item grid-item-1' src='./assets/images/dept img/n19.png' alt=''>
+    
+        </div>
+        <div>
+          <img class='grid-item grid-item-2' src='./assets/images/dept img/n10.jpeg' alt=''>
+        
+        </div>
+        <div>
+          <img class='grid-item grid-item-3' src='./assets/images/dept img/n11.jpeg' alt=''>
+      
+        </div>
+        <div>
+          <img class='grid-item grid-item-4' src='./assets/images/dept img/n12.jpeg' alt=''>
+        
+        </div>
+        <div>
+          <img class='grid-item grid-item-5' src='./assets/images/dept img/n13.jpeg' alt=''>
+        
+        </div>
+        <div>
+          <img class='grid-item grid-item-6' src='./assets/images/dept img/n14.jpeg' alt=''>
+      
+        </div>
+        <div>
+          <img class='grid-item grid-item-7' src='./assets/images/dept img/n15.jpeg' alt=''>
+    
+        </div>
+        <div>
+          <img class='grid-item grid-item-8' src='./assets/images/dept img/n16.png' alt=''>
+          
+        </div>
+        <div>
+          <img class='grid-item grid-item-9' src='./assets/images/dept img/n17.png' alt=''>
+          
+        </div>
+        <div>
+          <img class='grid-item grid-item-10' src='./assets/images/dept img/n18.png' alt=''>
+
+        </div>
+      </div>
+      
+      </div> 
+      
+     
+  </div>
+  <div style="margin-bottom: 50px;">
+  <button type="button" class="collapsible" style="--clr:#0FF0FC"><span>Brochure</span><i></i></button>
+  <div class="content" style="margin-top: 40px;">
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img1.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img2.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img3.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+          </div>
+
+          
+          
+</div>
+
+          <script>
+            // $('.portfolio-item').isotope({
+      //  	itemSelector: '.item',
+      //  	layoutMode: 'fitRows'
+      //  });
+      $('.portfolio-menu ul li').click(function(){
+         $('.portfolio-menu ul li').removeClass('active');
+         $(this).addClass('active');
+         
+         var selector = $(this).attr('data-filter');
+         $('.portfolio-item').isotope({
+           filter:selector
+         });
+         return  false;
+       });
+       $(document).ready(function() {
+       var popup_btn = $('.popup-btn');
+       popup_btn.magnificPopup({
+       type : 'image',
+       gallery : {
+         enabled : true
+       }
+       });
+       });
+  </script>
+   <div class="main-text">
+    <div  style="padding-top:10px; margin-bottom: 20px;color: #FFF;">
+    <center><h4>Elite alumini</h4></center>
+    </div>
+</div>
+<section class="section courses" data-section="section4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- <div class="section-heading">
+          <h2>EXPLORE EVENTS</h2>
+        </div> -->
+      </div>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <a href="activities.html">
+            <img src="./assets/images/alumini/Group 69.png" alt="Course #4">
+        
+          <div class="down-content">
+            <p></p>
+            <h4>Santhosh  <br>(2018  passed out)<br>
+              USACompany: Pointel <br>
+              IncDesignation: Lead Software Developer
+ 
+            </h4>
+          
+            <div class="text-button-pay">
+              <!-- <i class="fa fa-angle-double-right"></i> -->
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="item">
+          <a href="activities.html">
+            <img src="./assets/images/alumini/Group 70.png" alt="Course #4">
+         
+          <div class="down-content">
+            <p></p>
+            <h4>Anton rose Gregory2013 <br> batchCompany: nasdaq,Stockholm <br> swedenDesignation 
+            </h4>
+            <p></p>
+            <div class="text-button-free">
+              <!-- <i class="fa fa-angle-double-right"></i> -->
+            </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="activities.html">
+            <img src="./assets/images/alumini/Group 71.png" alt="Course #4">
+
+          <div class="down-content">
+            <p></p>
+            <h4>Vidyashree (2018) <br>
+              <!-- 2018 batch <br> -->
+              Thermofisher Scientific 
+              Information Architecture  <br>
+              Strategists 
+
+            
+
+              </h4>
+            <p></p>
+            <div class="text-button-pay">
+              <!-- <i class="fa fa-angle-double-right"></i> -->
+            </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="activities.html">
+            <img src="./assets/images/alumini/Group 72.png" alt="Course #4">
+          <div class="down-content">
+            <p></p>
+            <h4>Nirosha Natarajan(2009) <br>
+              Embedded testing engineer 
+              Effitrax telematics (belgium)
+            
+            </h4>
+            <p></p>
+            <div class="text-button-free">
+              <!-- <i class="fa fa-angle-double-right"></i> -->
+            </a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="item">
+          <a href="activities.html">
+          <img src="" alt="">
+          <div class="down-content">
+            <h4>ORIENTATION PROGRAM</h4>
+            <p></p>
+            <div class="text-button-pay">
+            <i class="fa fa-angle-double-right"></i>
+            </a>
+            </div>
+          </div>
+        </div> -->
+        <div class="item">
+          <a href="activities.html">
+            <img src="./assets/images/alumini/Group 73.png" alt="Course #4">
+          <div class="down-content">
+            <h4>Akshay Kumaar M <br>
+              BrainSightAIDesignation: Machine Learning Neuroscience EngineerLocation: Bangalore
+            
+            </h4>
+            <p></p>
+            <div class="text-button-free">
+            <!-- <i class="fa fa-angle-double-right"></i> -->
+          </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="activities.html">
+            <img src="./assets/images/alumini/Group 74.png" alt="Course #4">
+          <div class="down-content">
+            <h4>Vigneshwari R <br>  Android DeveloperCompany: Royal Bank of CanadaCountry name: Canada2018 passed out</h4>
+            <p></p>
+            <div class="text-button-free">
+            <!-- <i class="fa fa-angle-double-right"></i> -->
+          </a>
+            </div>
+          </div>
+        </div>
+</section>
+
+        
+         
+     </section>
+      
+         
+
+              
+              <div class="cou">
+                
+                <h2 style="margin-bottom: 0rem !important;" >Contact Us</h2> 
+              <!-- <div class="cou">
+                <label><b>ADDRESS:</b></label>
+               
+                <label >St Joseph's College of Engineering<br/>
+                  OMR Chennai-119.</label>
+              </div>
+            <div class="cou">
+                <label class=""><b>PHONE:</b></label>
+               
+                <label class="">Phone:044 - 24501060, 24501449<br/>
+Extn. 5560,5561,5562,5563,5564<br/>
+Fax:044 - 2450 0861</label>
+              </div>
+            <div class="cou">
+                <label class=""><b>EMAIL:</b></label>
+              
+                <label class="">jprstjosephs@stjosephs.ac.in<br/>
+                  hoditstaffaffairs@stjosephs.ac.in<br/>
+                  hoditstudentaffairs@stjosephs.ac.in
+                  hoditlabaffairs@stjosephs.ac.in</label>
+              </div> -->
+              
+              <div style="padding-top: 20px;">
+                
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1125.925963076532!2d80.21632009179993!3d12.868535982481049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b3b46334c29%3A0x314fab719337d299!2sDepartment%20of%20Information%20Technology!5e0!3m2!1sen!2sin!4v1677491235223!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                  <!-- <img src="https://simplemaps.com/static/img/frog.png" /> -->
+                  <div id="popup" class="popup"><img NAME="popup1" id="popup1" src="https://simplemaps.com/static/img/frog.png" alt="calendar"> 
+                    </div>
+                </iframe>
+                <script>
+                function pop(e) { //function called by first hotspot
+
+                  Image.src = "https://simplemaps.com/static/img/frog.png" //event image
+                  document.popup1.src = Image.src; 
+                  var thing = document.getElementById("popup");
+              
+                  thing.style.left = e.clientX + 'px';
+                  thing.style.top = e.clientY  + 'px';
+                  $("#popup").toggle();
+              
+                  return true;
+               }
+               </script>
+              </div>
+
+              <footer class="footer-section">
+                <div class="container">
+                    <div class="footer-cta pt-5 pb-5">
+                        <div class="row">
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class="fas fa-map-marker-alt" style="color: #fff;"></i>
+                                    <div class="cta-text">
+                                        <h4 style="color:white;">ADDRESS</h4>
+                                        <span style="color:white;">St Joseph's College of Engineering<br/>
+                                          OMR Chennai-119.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class=""></i>
+                                    <div class="cta-text">
+                                        <h4 style="color:white;">PHONE</h4>
+                                        <span style="color:white;">Phone:044 - 24501060, 24501449<br/>
+                                          Extn. 5560,5561,5562,5563,5564<br/>
+                                          Fax:044 - 2450 0861</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-4 mb-30">
+                                <div class="single-cta">
+                                    <i class="far fa-envelope-open"></i>
+                                    <div class="cta-text">
+                                        <h4 style="color:white;">EMAIL</h4>
+                                        <span style="color:white;">jprstjosephs@stjosephs.ac.in<br/>
+                                          hoditstaffaffairs@stjosephs.ac.in<br/>
+                                          hoditstudentaffairs@stjosephs.ac.in
+                                          hoditlabaffairs@stjosephs.ac.in</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+     
+        
+
+  
+
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        // Google Maps setup
+        var googlemap = new google.maps.Map(
+            document.getElementById('googlemap'),
+            {
+                center: new google.maps.LatLng(44.5403, -78.5463),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+        );
+    });
+</script>
+  
+
+  <footer>
+    <div class="container">
+      <div class=" mx-auto" style="">
+        <a href="dev.html"><div class="col-md-12">
+          <p>Developed by Students of IT Department © 2023  
+          </div></a>
+        
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').onclick('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('a[href^="#"]').on('click',function (e) {
+          e.preventDefault();
+
+          var target = this.hash;
+          var $target = $(target);
+
+          $('html, body').stop().animate({
+             'scrollTop': $target.offset().top
+          }, 900, 'swing');
+          });
+      });
+    </script>
+    <script>
+      // When the user clicks on <div>, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+      </script>
+  <script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+  <script>
+   var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+
+  </script>
+  <script>
+    jQuery(document).ready(function($) {
+        		"use strict";
+        		//  TESTIMONIALS CAROUSEL HOOK
+		        $('#customers-testimonialsh').owlCarousel({
+		            loop: true,
+		            center: true,
+		            items: 3,
+		            margin: 0,
+		            autoplay: true,
+		            dots:true,
+		            autoplayTimeout: 8500,
+		            smartSpeed: 450,
+		            responsive: {
+		              0: {
+		                items: 1
+		              },
+		              768: {
+		                items: 2
+		              },
+		              1170: {
+		                items: 3
+		              }
+		            }
+		        });
+        	});
+  </script>
+  <script>
+    ! function ($) {
+     var defaults = {
+         sectionContainer: "> section",
+         angle: 50,
+         opacity: true,
+         scale: true,
+         outAnimation: true,
+         pageContainer: '.page_container',
+         pageOpacity: true
+     };
+     $.fn.tiltedpage_scroll = function (options) {
+         var settings = $.extend({}, defaults, options),
+             el = $(this);
+         el.find(settings.sectionContainer).addClass("tps-section");
+         el.find('.tps-section').each(function () {
+             var el2 = $(this);
+             el2.wrapInner("<div class='tps-wrapper'></div>");
+         });
+
+         function isElementInViewport(el3) {
+             var docViewTop = $(window).scrollTop(),
+                 docViewBottom = docViewTop + $(window).height(),
+                 elemTop = el3.offset().top,
+                 elemBottom = elemTop + el3.outerHeight(true);
+             return ((elemBottom >= docViewTop) && (elemTop <= docViewBottom));
+         }
+
+         function elementVisibilityMayChange(el4) {
+             if (isElementInViewport(el4)) {
+                 el4.addClass("tps-inview")
+             } else {
+                 el4.removeClass("tps-inview")
+             }
+         }
+         $(window).on('DOMContentLoaded load resize scroll', function () {
+             el.find(settings.sectionContainer).each(function () {
+                 elementVisibilityMayChange($(this));
+             });
+             el.find('.tps-section.tps-inview > .tps-wrapper').each(function (index) {
+                 var el2 = $(this),
+                     elc = el2.find(settings.pageContainer),
+                     opacity = 0,
+                     opacity2 = 0,
+                     st = $(window).scrollTop(),
+                     deg = ((el2.parent().offset().top - el2.parent().height()) - st) / $(window).height() * (settings.angle * 3),
+                     scale = ((st + $(window).height() - (el2.parent().offset().top - el2.parent().height())) / ($(window).height()));
+                 if (scale > 1) scale = 1;
+                 if (deg < 0) deg = 0;
+                 if (st > el2.parent().offset().top) {
+                     if (settings.outAnimation == false) {
+                         opacity = 1;
+                         opacity2 = 1;
+                         if (opacity < 0) {
+                           opacity = 0;
+                           opacity2 = 0;
+                         }
+                         if (deg < 0) deg = 0;
+                     } else {
+                         opacity = ((el2.parent().offset().top + ($(window).height() * 1.2) - st)) / ($(window).height());
+                         opacity2 = opacity;
+                         opacity = Math.pow(opacity, 25);
+                         opacity2 = Math.pow(opacity2, 25);
+                         //console.log('- '+opacity2);
+                         deg = (el2.parent().offset().top - st) / $(window).height() * (settings.angle * 3);
+                         scale = ((st + $(window).height() - el2.parent().offset().top) / ($(window).height()));
+                     }
+                 } else {
+                     if (index != 0) {
+                         opacity = ((st + $(window).height() - el2.parent().offset().top + (el2.height() / 2)) / $(window).height());
+                       opacity2 = opacity / 2;
+                       opacity2 = opacity2 < 0.4 ? opacity2/2 : opacity2;
+                         //console.log(opacity2);
+                         if (opacity > 1) {
+                             opacity = 1;
+                             opacity2 = 1;
+                         }
+                     } else {
+                         opacity = 1;
+                         opacity2 = 1;
+                         deg = 0;
+                         scale = 1;
+                     }
+                 } if (settings.scale == false) scale = 1;
+                 if (settings.angle == false) deg = 0;
+                 if (settings.opacity == false) {
+                   opacity = 1;
+                   opacity2 = 1;
+                 }
+                 el2.css({
+                     'transform': 'rotateX(' + deg + 'deg) scale(' + scale + ', ' + scale + ')',
+                     opacity: opacity
+                 });
+                 elc.css({opacity: opacity2});
+             });
+         });
+     }
+ }(window.jQuery);
+
+$(document).ready(function(){
+  $(".main").tiltedpage_scroll({
+    angle: 20
+  });
+});
+  </script>
+  <script>
+    var pageLocation=[],
+    lastPage=null;
+    $Zz=0;
+
+TweenLite.set(".centerClass", {xPercent:-50, yPercent:-50});
+TweenLite.set(".pageWrapper", {left: "327px", perspective:1000});
+TweenLite.set(".page", {transformStyle:"preserve-3d"});
+TweenLite.set(".back", {rotationY:-180});
+TweenLite.set([".back", ".front"],{backfaceVisibility:"hidden"});
+
+// All pages must have an id assigned to them in the HTML
+$(".page").click(
+function() {
+	if (pageLocation[this.id] === undefined || pageLocation[this.id] =="right") {
+		$Zz = ($(".left").length)+1 ;
+		TweenMax.to($(this), 1, {force3D:true,rotationY:-180,transformOrigin:"-1px top",className:'+=left',z:$Zz,zIndex:$Zz}); 
+		TweenLite.set($(this), {className:'-=right'}); 
+		pageLocation[this.id]= "left";
+	}
+	else {
+		$Zz = ($(".right").length)+1 ;
+		TweenMax.to($(this), 1, {force3D:true,rotationY:0,transformOrigin:"left top",className:'+=right',z:$Zz,zIndex:$Zz});
+		TweenLite.set($(this), {className:'-=left'}); 
+		pageLocation[this.id]= "right";
+	}
+}
+);
+
+$(".front").hover(
+  function() {
+     TweenLite.to($(this).find(".pageFoldRight"), 0.3, {width:"50px", height:"50px", backgroundImage:"linear-gradient(45deg,  #fefefe 0%,#f2f2f2 49%,#ffffff 50%,#ffffff 100%)"});
+  },
+  function() {
+    TweenLite.to($(this).find(".pageFoldRight"), 0.3, {width:"0px", height:"0px"});  
+    }
+);
+
+$(".back").hover(
+  function() {
+     TweenLite.to($(this).find(".pageFoldLeft"), 0.3, {width:"50px", height:"50px", backgroundImage:"linear-gradient(135deg,  #ffffff 0%,#ffffff 50%,#f2f2f2 51%,#fefefe 100%)"});
+  },
+  function() {
+    TweenLite.to($(this).find(".pageFoldLeft"), 0.3, {width:"0px", height:"0px"});  
+    }
+);
+
+
+  </script>
+  <script>
+    var a = document.getElementsByTagName("a");
+var cfImg = document.getElementsByClassName("coverflow__image")
+
+var scaleI = 0;
+for (scaleI; scaleI < a.length; scaleI++) {
+  if (scaleI === 3) {
+    continue;
+  } else {
+    a[scaleI].style.cursor = "default";
+    a[scaleI].addEventListener("click", prevDef);
+  }
+}
+
+function prevDef(e) {
+  e.preventDefault();
+}
+
+function forScale(coverflowPos) {
+  for (scaleI = 0; scaleI < a.length; scaleI++) {
+    a[scaleI].style.cursor = "default";
+    a[scaleI].addEventListener("click", prevDef);
+  }
+  for (scaleI = 0; scaleI < cfImg.length; scaleI++) {
+    if (cfImg[scaleI].getAttribute("data-coverflow-index") == coverflowPos) {
+      cfImg[scaleI].parentElement.style.cursor = "pointer";
+      cfImg[scaleI].parentElement.removeEventListener("click", prevDef);
+    }
+  }
+}
+//end added by Chase
+
+function setupCoverflow(coverflowContainer) {
+  var coverflowContainers;
+
+  if (typeof coverflowContainer !== "undefined") {
+    if (Array.isArray(coverflowContainer)) {
+      coverflowContainers = coverflowContainer;
+    } else {
+      coverflowContainers = [coverflowContainer];
+    }
+  } else {
+    coverflowContainers = Array.prototype.slice.apply(document.getElementsByClassName('coverflow'));
+  }
+
+  coverflowContainers.forEach(function(containerElement) {
+    var coverflow = {};
+    var prevArrows, nextArrows;
+
+    //capture coverflow elements
+    coverflow.container = containerElement;
+    coverflow.images = Array.prototype.slice.apply(containerElement.getElementsByClassName('coverflow__image'));
+    coverflow.position = Math.floor(coverflow.images.length / 2) + 1;
+
+    //set indicies on images
+    coverflow.images.forEach(function(coverflowImage, i) {
+      coverflowImage.dataset.coverflowIndex = i + 1;
+    });
+
+    //set initial position
+    coverflow.container.dataset.coverflowPosition = coverflow.position;
+
+    //get prev/next arrows
+    prevArrows = Array.prototype.slice.apply(coverflow.container.getElementsByClassName("prev-arrow"));
+    nextArrows = Array.prototype.slice.apply(coverflow.container.getElementsByClassName("next-arrow"));
+
+    //add event handlers
+    function setPrevImage() {
+      coverflow.position = Math.max(1, coverflow.position - 1);
+      coverflow.container.dataset.coverflowPosition = coverflow.position;
+      //call the functin forScale added
+      forScale(coverflow.position);
+    }
+
+    function setNextImage() {
+      coverflow.position = Math.min(coverflow.images.length, coverflow.position + 1);
+      coverflow.container.dataset.coverflowPosition = coverflow.position;
+      //call the function Chase added
+      forScale(coverflow.position);
+    }
+
+    function jumpToImage(evt) {
+      coverflow.position = Math.min(coverflow.images.length, Math.max(1, evt.target.dataset.coverflowIndex));
+      coverflow.container.dataset.coverflowPosition = coverflow.position;
+      //start added by Chase
+      setTimeout(function() {
+        forScale(coverflow.position);
+      }, 1);
+      //end added by Chase
+    }
+
+    function onKeyPress(evt) {
+      switch (evt.which) {
+        case 37: //left arrow
+          setPrevImage();
+          break;
+        case 39: //right arrow
+          setNextImage();
+          break;
+      }
+    }
+    prevArrows.forEach(function(prevArrow) {
+      prevArrow.addEventListener('click', setPrevImage);
+    });
+    nextArrows.forEach(function(nextArrow) {
+      nextArrow.addEventListener('click', setNextImage);
+    });
+    coverflow.images.forEach(function(image) {
+      image.addEventListener('click', jumpToImage);
+    });
+    window.addEventListener('keyup', onKeyPress);
+  });
+}
+
+setupCoverflow();
+  </script>
+  <script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+  
+</body>
+</html>

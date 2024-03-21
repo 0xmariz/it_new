@@ -1,0 +1,91 @@
+.resume{
+    width:50% ;
+    height:70%;
+
+}
+/* srollbar code */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #CCCCCC; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FF2079; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #CCCCCC; 
+  }	
+
+  footer {
+    background-color: #152036;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0px;
+    padding: 25px 0px;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+footer p a,
+footer p a:hover {
+    color: #00FFF3;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .resume{
+        width:100%;
+        height:100%;
+        
+    
+    }
+    }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .resume{
+        width:100%;
+        height:100%;
+    
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .resume{
+        width:100%;
+        height:100%;
+    
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .resume{
+        width:100%;
+        height:100%;
+    
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .resume{
+        width:80%;
+        height:70%;
+    
+}
+}

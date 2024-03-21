@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>IT Department</title>
+	<!-- <link rel="stylesheet" href="assets/css/carousel.css">
+	<script defer src="assets/js/carousel.js"></script> -->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome.css"> -->
+    <link rel="stylesheet" href="assets/css/index.css">
+	 <link rel="stylesheet" href="assets/css/aboutus.css"> 
+    <!-- <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css"> -->
+
+	<style media="screen">
+		.sb{
+	  padding-bottom:50px;
+	  margin: auto;
+	  box-sizing: border-box;
+  }
+
+  .container23{
+	  width: 70vw;
+	  max-width: 600px;
+	 
+	  margin:auto;
+	  top: 50%;
+	  left: 50%;
+	  overflow: hidden;
+	  border: 10px solid #ffffff;
+	  border-radius: 8px;
+	  box-shadow: 10px 25px 30px rgba(0,0,0,0.3);
+  }
+  .wrapper23{
+	  width: 100%;
+	  display: flex;
+	  animation: slide 16s infinite;
+  }
+  @keyframes slide{
+	  0%{
+		  transform: translateX(0);
+	  }
+	  25%{
+		  transform: translateX(0);
+	  }
+	  30%{
+		  transform: translateX(-100%);
+	  }
+	  50%{
+		  transform: translateX(-100%);
+	  }
+	  55%{
+		  transform: translateX(-200%);
+	  }
+	  75%{
+		  transform: translateX(-200%);
+	  }
+	  80%{
+		  transform: translateX(-300%);
+	  }
+	  100%{
+		  transform: translateX(-300%);
+	  }
+  }
+  img{
+	  width: 100%;
+  }
+
+  .pope{
+	padding-left: 50%;
+    padding-right: 50%;
+    /* width: 100px; */
+  }
+  .modal {
+        display: none;
+        position: fixed;
+        z-index: 8;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+      .modal-content {
+        margin: 150px auto;
+        border: 1px solid #000000;
+        width: 60%;
+      }
+      
+      .contact-form button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: #1c87c9;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+      }
+      button:hover {
+        background: #2371a0;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      button.button {
+        background: none;
+        border-top: none;
+        outline: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: #02274a 1px solid;
+        /* padding: 0 200px 3px 200px; */
+		/* margin:0 10px 3px 10px; */
+        /* font-size: 16px; */
+		color:white;
+		
+        cursor: pointer;
+		border: 2px solid rgb(190, 26, 95);
+      }
+      button.button:hover {
+		background-color: rgb(190, 26, 95);
+  color: white;
+      }
+	  </style>
+	
+    
+  </head>
+
+<body>
+  <!-- <header> <script>
+    $(document).ready(function(){
+      $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        if (scroll > 300) {
+          $(".black").css("background" , "blue");
+        }
+    
+        else{
+          $(".black").css("background" , "#333");  	
+        }
+      })
+    })  </script><div class="black">
+    <ul>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+  </div>  
+</header>  -->
+  
+
+   <header class="bgcolor">
+	<header class="main-header" role="header">
+		<div class="logo"> 
+		<a href="https://stjosephs.ac.in/index.html" class="sjce"><em>S</em><em style="text-transform: lowercase;">t.</em>  JOSEPH'S</a>
+		</div>
+		<a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a> 
+		<nav id="menu" class="main-nav resp" role="navigation">
+		<ul class="main-menu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="aboutus.html">About Us</a></li> 
+			<li><a href="facaulty.html">FACULTY</a></li>
+			<li><a href="lab.html">LAB</a></li>
+			<li><a href="placements.html" class="external">PLACEMENTS</a></li>
+			<li><a href="randd.html">R&D</a></li>
+			<li><a href="academics.html">ACADEMICS</a></li>
+			<li><a href="activities.html">ACTIVITIES</a></li>
+		</ul>
+		</nav> 
+	</header>
+   </header>
+
+     <section id="fh5co-home" data-section="home" style="background-image: url(assets/images/aboutus.jpg); padding-top: 500px; " data-stellar-background-ratio="0.5" >
+	<div class="gradient"></div>
+	<div class="container"> 
+		<div class="text-wrap"> 
+			<div class="text-inner">
+				<!-- <div class="row"> -->
+					<div class="abo" >
+						<div class="jm">
+						<h1 class="to-animate">	ABOUT <span>US</span></h1>
+						
+						<div class="call-to-action" >
+							
+							<a href="#fh5co-services" class="download to-animate" style="padding-left:63px;"> Read more</a>
+						</div>
+						</div>
+					</div>
+				<!-- </div> -->
+			</div>
+		</div> 
+	</div> 
+</section>
+
+<section id="fh5co-services" data-section="services">
+	<div class="fh5co-services">
+		<div class="container">
+		 <div class="row"> 
+				<div class="col-md-12 section-heading text-center">
+					<h1 class="to-animate"><span>WHO WE ARE</span></h1>
+					<div class="row row1"style=" padding-left:100px margin-left:100px;">
+						<!-- <div class="col-md-8 col-md-offset-2 subtext"> -->
+							<h3 class="to-animate" >Department of Information Technology with state-of-art research facilities and well qualified faculty members produces young aspiring Engineers ever since its inception in 1997 has consistently brought laurels to the college. It offers both undergraduate (B.Tech Information Technology) and Post-graduation (M.E Software Engineering) under Anna University, Chennai It is accredited for its excellence by the National Board of Accreditation (NBA), entrenched by AICTE (All India Council of Technical Education). The prominent and leading employers have made the placement record of the department excellent </h3>
+							<h3 class="to-animate">There are 39 well qualified and dedicated faculties with 12 of them holding Doctoral degree from various reputed Universities adds highlight to our department. Our faculty members besides teaching are involved in many activities like continuing education, technical consultancy, research & development, coordinating professional bodies such as IEEE-CIS chapter etc..,</h3>
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+		
+			
+			<div class="row">
+					<div class="col-md-3 text-center">
+					<a href="#fh5co-counter-section">
+					<div class="box-services">
+						<div class="icon to-animate">
+							<img src="assets/images/vision.png" height="200px" width="40px"><!-- trophy -->
+						</div> 
+						<div class="fh5co-post to-animate">
+							<p><b>VISION</b></p>
+							
+						</div>
+					</div>
+					 </a>
+
+					
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#fh5co-explore">
+					<div class="box-services">
+						<div class="icon to-animate">
+							<img src="assets/images/mission.png" height="200px" width="150px" >
+						</div> 
+						 <div class="fh5co-post to-animate">
+							<p ><b>MISSION</b></p>
+							
+						</div>
+					</div></a>
+
+					
+				</div>
+				
+				<div class="col-md-3 text-center">
+					<a href="#fh5co-pricing">
+					<div class="box-services">
+						<div class="icon to-animate">
+							<img src="assets/images/peo.png" height="200px" width="40px"><!-- -->
+						</div>
+						<div class="fh5co-post to-animate">
+							<p><b>PEOs</b></p>
+							
+						</div>
+					</div>
+					</a>
+
+					
+				</div>
+				<div class="col-md-3 text-center">
+					<a href="#fh5co-trusted">
+					<div class="box-services">
+						<div class="icon to-animate">
+							<img src="assets/images/pso.png" height="200px" width="40px">
+						</div>
+						<div class="fh5co-post to-animate">
+							<p><b>PSOs</b></p>
+							
+						</div>
+					</a>
+					</div>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+ 
+<!--  
+
+	<div class="sb" style="background-image: url('/assets/images/back.jpg');">
+		<div class="container23">
+			<div class="wrapper23">
+				<img src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg">
+				<img src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg">
+				<img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg">
+				<img src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg">
+			</div>
+		</div>
+	</div> -->
+
+	
+	<div id="fh5co-counter-section" class="fh5co-counters">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h1 class="to-animate"><span>VISION</span></h1>
+					<div class="row">
+						<!-- <div class="col-md-8 col-md-offset-2 subtext"> -->
+							<h3 class="to-animate">To achieve and sustain international prominence in education, research and professional skill development, by inculcating strong technological principles to meet the global demand. </h3>
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<section id="fh5co-explore" data-section="explore">
+	<div class="container">
+		<div class="row" style="padding-top:0px !important">
+			<div class="col-md-12 section-heading text-center">
+				<h1 class="to-animate"><span>MISSION</span></h1>
+				<div class="">
+					<!-- <div class="col-md-8 col-md-offset-2 subtext to-animate"> -->
+						<h3 style="text-align: center; padding-bottom: 10px; margin-bottom:0 ;">
+								
+								<h4 style="color: aqua;height: 20px; ">Cognitive Ability</h4>
+								<p style="text-align: left; font-size: 20px;">To set a standard in education by developing the intellectual strength of students and guiding them to have a sound and updated knowledge in the emerging areas of technology.</p>
+								<br>
+								<h4 style="color: aqua;">Personality Development</h4>
+								<p style="text-align: left;font-size: 20px;">To synergise the mindset, skill, attitude and core competence of students to produce graduates of International reckoning and caliber.</p>
+								<br>
+								<h4 style="color: aqua;">Social Responsibility</h4>
+								<p style="text-align: left;font-size: 20px;">To mould students by inculcating moral and ethical values, thereby influencing a positive impact on the environment and society.</p>
+								<br>
+								<h4 style="color: aqua;">Career Guidance</h4>
+								<p style="text-align: left;font-size: 20px;">To enable students, shine in their academic pursuits, attain leadership and managerial capability to meet the needs of the progressive industrial world</p>
+								<br>
+								<h4 style="color: aqua;font-size: 20px;">Research Development</h4>
+								<div></div>
+								<p style="text-align: left;font-size: 20px;">To develop a centre of Excellence in research for breeding innovative ideas.</p>
+							
+						</h3>
+					<!-- </div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<section id="fh5co-trusted" class="fh5co-trusted" data-section="faq">
+	<div class="fh5co-trusted">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h1 class="to-animate"><span>PROGRAM OUTCOMES</span></h1>
+					<div class="row">
+						<!-- <div class="col-md-8 col-md-offset-2 subtext"> -->
+							<h3 class="to-animate" style="padding-bottom: 0;">Engineering Graduates will be able to:</h3>
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Engineering knowledge:</h3>
+							<p>Apply the knowledge of mathematics, science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.
+							</p>
+						</div>
+					</div>
+				
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Problem analysis:</h3>
+							<p>Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusions using first principles of mathematics, natural sciences, and engineering sciences.
+							</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Design/development of solutions:</h3>
+							<p>Design solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Conduct investigations of complex problems:</h3>
+							<p>Use research-based knowledge and research methods, including design of experiments, analysis and interpretation of data, and synthesis of the information to provide valid conclusions.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Modern tool usage:</h3>
+							<p>Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modeling of complex engineering activities with an understanding of the limitations.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>The engineer and society:</h3>
+							<p>Apply reasoning informed by the contextual knowledge to assess societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Environment and Sustainability:</h3>
+							<p>Understand the impact of the professional engineering solutions to societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Ethics:</h3>
+							<p>Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Individual and team work:</h3>
+							<p>Function effectively as an individual, and as a member or leader in diverse teams, and in multidisciplinary settings.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Communication:</h3>
+							<p>Communicate effectively on complex engineering activities with the engineering community and with society at large, such as, being able to comprehend and write effective reports and design documentation, make effective presentations, and give and receive clear instructions.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Project management and finance:</h3>
+							<p>Demonstrate knowledge and understanding of the engineering and management principles and apply these to one’s own work, as a member and leader in a team, to manage projects and in multidisciplinary environments.</p>
+						</div>
+					</div>
+					<div class="box-faq to-animate-2">
+						<i class="icon-check2"></i>
+						<div class="to-animate">
+							<h3>Lifelong learning:</h3>
+							<p>Recognize the need for, and have the preparation and ability to engage in independent and lifelong learning in the broadest context of technological change.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section id="fh5co-pricing" data-section="pricing">
+	<div class="fh5co-pricing">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h1 class="to-animate"><span>PROGRAM EDUCATIONAL OBJECTIVES</em></span></h1>
+					<div class="row">
+						
+							<h3 class="to-animate">
+								
+									<li>To ensure graduates will be proficient in utilizing the fundamental knowledge of basic sciences, mathematics and Information Technology for the applications relevant to various streams of Engineering and Technology.</li>
+									<br>
+									<li>To enrich graduates with the core competencies necessary for applying knowledge of computers and telecommunications equipment to store, retrieve, transmit, manipulate and analyze data in the context of business enterprise.</li>
+									<br>
+									<li>To enable graduates to think logically, pursue lifelong learning and will have the capacity to understand technical issues related to computing systems and to design optimal solutions.</li>
+									<br>
+									<li>To enable graduates to develop hardware and software systems by understanding the importance of social, business and environmental needs in the human context.</li>
+									<br>
+									<li>To enable graduates to gain employment in organizations and establish themselves as professionals by applying their technical skills to solve real world problems and meet the diversified needs of industry, academia and research.</li>
+								
+							</h3> 
+						
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</section>	 -->
+
+
+<!-- <div class="sb" style="background-image: url('/assets/images/back.jpg');padding-top: 100px;">
+	<div class="container23">
+		<div class="wrapper23">
+			<img src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg">
+			<img src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg">
+			<img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg">
+			<img src="https://cdn.wallpapersafari.com/24/98/dwMtqD.jpg">
+		</div>
+	</div>
+</div> -->
+
+
+
+<!-- <section id="fh5co-trusted" data-section="trusted">
+	<div class="fh5co-trusted">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h1 class="to-animate"><span>PROGRAM SPECIFIC OUTCOMES</span></h1>
+					<div class="row">
+						
+							<h3 class="to-animate">
+								<li>To create, select and apply appropriate techniques, resources, modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.</li>
+								<li>To manage complex IT projects with consideration of the human, financial, ethical and environmental factors and an understanding of risk management processes, and operational and policy implications.</li>
+							</h3>
+						
+					</div>
+				</div>
+				
+
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+<section style="display: flex;justify-content: center;align-items: center; gap:2rem">
+	<div class="">
+	<p>
+		<button class="button" data-modal="modalOne" >PROGRAM EDUCATIONAL OBJECTIVES(IT)</button>
+	  </p>
+	  <p>
+		<button class="button" data-modal="modalTwo">PROGRAM SPECIFIC OUTCOMES(IT)</button>
+	  </p>
+	</div>
+
+	  <div id="modalOne" class="modal">
+		<div class="modal-content">
+		  <div class="contact-form">
+			<a class="close">&times;</a>
+			
+			  <h2 style="color:#BE1A5F !important;">PROGRAM EDUCATIONAL OBJECTIVES(IT)</h2>
+			  <div>
+				<p style="color:black !important;">
+					1. To ensure graduates will be proficient in utilizing the fundamental knowledge of basic sciences, mathematics and Information Technology for the applications relevant to various streams of Engineering and Technology.
+<br/>
+2. To enrich graduates with the core competencies necessary for applying knowledge of computers and telecommunications equipment to store, retrieve, transmit, manipulate and analyze data in the context of business enterprise.
+<br/>
+3. To enable graduates to think logically, pursue lifelong learning and will have the capacity to understand technical issues related to computing systems and to design optimal solutions.
+<br/>
+4. To enable graduates to develop hardware and software systems by understanding the importance of social, business and environmental needs in the human context.
+<br/>
+5. To enable graduates to gain employment in organizations and establish themselves as professionals by applying their technical skills to solve real world problems and meet the diversified needs of industry, academia and research.
+				</p>
+			  </div>
+			  
+			  
+			
+		  </div>
+		</div>
+	  </div>
+	  <div id="modalTwo" class="modal">
+		<div class="modal-content">
+		  <div class="contact-form">
+			<span class="close">&times;</span>
+			
+			  <h2 style="color:#BE1A5F !important;">PROGRAM SPECIFIC OUTCOMES(IT)</h2>
+			  <p style="color:black !important;">
+				<li>To create, select and apply appropriate techniques, resources, modern engineering and IT tools including prediction and modeling to complex engineering activities with an understanding of the limitations.</li>
+				<br/>
+				<li>To manage complex IT projects with consideration of the human, financial, ethical and environmental factors and an understanding of risk management processes, and operational and policy implications</li>
+				<br/>
+			</p>
+			  
+			
+		  </div>
+		</div>
+	  </div>
+
+
+	  <div class="">
+		<p>
+			<button class="button" data-modal="modalThree" >PROGRAM EDUCATIONAL OBJECTIVES(AML)</button>
+		  </p>
+		  <p>
+			<button class="button" data-modal="modalFour">PROGRAM SPECIFIC OUTCOMES(AML)</button>
+		  </p>
+		</div>
+	
+		  <div id="modalThree" class="modal">
+			<div class="modal-content">
+			  <div class="contact-form">
+				<a class="close">&times;</a>
+				
+				  <h2 style="color:#BE1A5F !important;">PROGRAM EDUCATIONAL OBJECTIVES(AML)</h2>
+				  <div>
+					<p style="color:black !important;">
+						1. To demonstrate technical skills, competency in fundamentals of Mathematics, Programming  
+and Artificial Intelligence in modelling, designing and conducting of experiments to provide solutions  
+for industry’s complex technological problems. <br/>
+2. To enrich graduates with creativity that applies the concepts of Machine Learning to create,  
+build and deploy solutions for various business problems <br/>
+3. To build graduates with potential and ability to engage in continuous professional  
+development and life-long learning. <br/>
+4. To train graduates to work in multi-disciplinary teams with superior work ethics and build  
+innovative solutions to serve the needs of the society. </br>
+5. To enable graduates to research, design and implement AI/ML products and services with  
+effective Communication and Entrepreneurial Skills.			</p>
+				  </div>
+				  
+				  
+				
+			  </div>
+			</div>
+		  </div>
+		  <div id="modalFour" class="modal">
+			<div class="modal-content">
+			  <div class="contact-form">
+				<span class="close">&times;</span>
+				
+				  <h2 style="color:#BE1A5F !important;">PROGRAM SPECIFIC OUTCOMES(AML)</h2>
+				  <p style="color:black !important;">
+					<li>Graduates should be able to acquire and apply practical competency with engineering  
+						knowledge in the field of artificial intelligence for efficient design of intelligent systems of varying  
+						complexity.  </li>
+						<br/>
+					<li>Graduates should be able to contribute constructive ideas and innovative Machine learning  
+						solutions for multi-disciplinary problems</li>
+					<br/>
+					<li>Graduates should be able to build systems by applying AI/ML methods, techniques and tools  
+						for solving engineering problems.</li>
+					<br/>
+					
+				</p>
+				  
+				
+			  </div>
+			</div>
+		  </div>
+
+<script>
+	
+      let modalBtns = [...document.querySelectorAll(".button")];
+      modalBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.getAttribute("data-modal");
+          document.getElementById(modal).style.display = "block";
+        };
+      });
+      let closeBtns = [...document.querySelectorAll(".close")];
+      closeBtns.forEach(function (btn) {
+        btn.onclick = function () {
+          let modal = btn.closest(".modal");
+          modal.style.display = "none";
+        };
+      });
+      window.onclick = function (event) {
+        if (event.target.className === "modal") {
+          event.target.style.display = "none";
+        }
+      };
+    
+
+	</script>
+	</section>
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/lightbox.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/video.js"></script>
+<script src="assets/js/slick-slider.js"></script>
+<!-- <script src="assets/js/custom.js"></script> -->
+
+ 
+
+<footer>
+	<div  style="position: absolute; top:100%; left:37%">
+	  <a href="dev.html"><p>Developed by Students of IT Department © 2022  </p></a>
+	  </div>
+  </div>
+</div>
+</footer> 
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/js/isotope.min.js"></script>
+    <script src="./assets/js/owl-carousel.js"></script>
+    <script src="./assets/js/lightbox.js"></script>
+    <script src="./assets/js/tabs.js"></script>
+    <script src="./assets/js/video.js"></script>
+    <script src="./assets/js/slick-slider.js"></script>
+    <script src="./assets/js/custom.js"></script>
+
+
+	<script>
+		//according to loftblog tut
+		$('.nav li:first').addClass('active');
+  
+		var showSection = function showSection(section, isAnimate) {
+		  var
+		  direction = section.replace(/#/, ''),
+		  reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+		  reqSectionPos = reqSection.offset().top - 0;
+  
+		  if (isAnimate) {
+			$('body, html').animate({
+			  scrollTop: reqSectionPos },
+			800);
+		  } else {
+			$('body, html').scrollTop(reqSectionPos);
+		  }
+  
+		};
+  
+		var checkSection = function checkSection() {
+		  $('.section').each(function () {
+			var
+			$this = $(this),
+			topEdge = $this.offset().top - 80,
+			bottomEdge = topEdge + $this.height(),
+			wScroll = $(window).scrollTop();
+			if (topEdge < wScroll && bottomEdge > wScroll) {
+			  var
+			  currentId = $this.data('section'),
+			  reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+			  reqLink.closest('li').addClass('active').
+			  siblings().removeClass('active');
+			}
+		  });
+		};
+  
+		$('.main-menu, .scroll-to-section').onclick('click', 'a', function (e) {
+		  if($(e.target).hasClass('external')) {
+			return;
+		  }
+		  e.preventDefault();
+		  $('#menu').removeClass('active');
+		  showSection($(this).attr('href'), true);
+		});
+  
+		$(window).scroll(function () {
+		  checkSection();
+		});
+	</script>
+  
+	<script type="text/javascript">
+	  $(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+		  e.preventDefault();
+  
+		  var target = this.hash;
+		  var $target = $(target);
+  
+		  $('html, body').stop().animate({
+			 'scrollTop': $target.offset().top
+		  }, 900, 'swing');
+		  });
+	  });
+	</script>
+
+	<!-- index script -->
+
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').onclick('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('a[href^="#"]').on('click',function (e) {
+          e.preventDefault();
+
+          var target = this.hash;
+          var $target = $(target);
+
+          $('html, body').stop().animate({
+             'scrollTop': $target.offset().top
+          }, 900, 'swing');
+          });
+      });
+    </script>
+  
+     
+</body>
+</html>
